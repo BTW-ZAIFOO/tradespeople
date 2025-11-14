@@ -1,0 +1,122 @@
+export const jobsData = [
+  {
+    id: 1,
+    title: 'Regular Garden Mowing & Maintenance',
+    type: 'recommended',
+    location: '32 mins away from LS14DY',
+    status: '1st to buy',
+    description: 'Regular mowing and maintenance.',
+    timeAgo: '11 hours ago',
+    distance: '32 mins',
+    credits: 14,
+    updatedAt: '12 hours ago'
+  },
+  {
+    id: 2,
+    title: 'Lawn Mowing and Garden Clearance',
+    type: 'latest',
+    location: '40 mins away from LS14DY',
+    status: '',
+    description: 'I need 2 jobs doing. The first is the patch of grass at the front of my house. I need this mowing every 2 months. The second is a one-off job: clearing and tidying my backyard of weeds and twigs so I can start fresh.',
+    timeAgo: '17 hours ago',
+    distance: '40 mins',
+    credits: 8,
+    updatedAt: '18 hours ago'
+  },
+  {
+    id: 3,
+    title: 'Hedge Trimming and Garden Waste Removal',
+    type: 'recommended',
+    location: '25 mins away from LS14DY',
+    status: '',
+    description: 'Trim hedges around the front and back garden and remove the trimmed waste. Must bring own tools and waste disposal bags.',
+    timeAgo: '5 hours ago',
+    distance: '25 mins',
+    credits: 10,
+    updatedAt: '6 hours ago'
+  },
+  {
+    id: 4,
+    title: 'Fence Painting Job',
+    type: 'latest',
+    location: '15 mins away from LS14DY',
+    status: 'Popular',
+    description: 'Need someone to paint 10 wooden fence panels in the backyard. Paint and brushes will be provided.',
+    timeAgo: '1 day ago',
+    distance: '15 mins',
+    credits: 12,
+    updatedAt: '1 day ago'
+  },
+  {
+    id: 5,
+    title: 'Tree Pruning and Leaf Cleanup',
+    type: 'recommended',
+    location: '50 mins away from LS14DY',
+    status: '',
+    description: 'Pruning two small trees and clearing fallen leaves from the lawn area. Bring own pruning tools and leaf blower if possible.',
+    timeAgo: '3 hours ago',
+    distance: '50 mins',
+    credits: 15,
+    updatedAt: '4 hours ago'
+  },
+  {
+    id: 6,
+    title: 'Patio Jet Washing Service',
+    type: 'latest',
+    location: '28 mins away from LS14DY',
+    status: '',
+    description: 'Jet wash a medium-sized patio to remove moss and dirt buildup. Must have own jet washer.',
+    timeAgo: '7 hours ago',
+    distance: '28 mins',
+    credits: 11,
+    updatedAt: '8 hours ago'
+  },
+  {
+    id: 7,
+    title: 'One-off Lawn Edging and Weeding',
+    type: 'recommended',
+    location: '18 mins away from LS14DY',
+    status: '',
+    description: 'Tidy up garden edges and remove weeds from the driveway and side paths. Estimated 2-hour job.',
+    timeAgo: '10 hours ago',
+    distance: '18 mins',
+    credits: 9,
+    updatedAt: '11 hours ago'
+  },
+  {
+    id: 8,
+    title: 'Regular Front Garden Maintenance (Fortnightly)',
+    type: 'recommended',
+    location: '35 mins away from LS14DY',
+    status: '1st to buy',
+    description: 'Looking for a gardener for regular maintenance — mowing, trimming, and basic cleaning every 2 weeks.',
+    timeAgo: '2 hours ago',
+    distance: '35 mins',
+    credits: 20,
+    updatedAt: '2 hours ago'
+  },
+  {
+    id: 9,
+    title: 'Gutter Cleaning Required',
+    type: 'latest',
+    location: '22 mins away from LS14DY',
+    status: '',
+    description: 'Clean gutters around the front and back of a semi-detached house. Ladder required.',
+    timeAgo: '19 hours ago',
+    distance: '22 mins',
+    credits: 13,
+    updatedAt: '20 hours ago'
+  },
+  {
+    id: 10,
+    title: 'Garden Redesign Consultation',
+    type: 'recommended',
+    location: '1 hour away from LS14DY',
+    status: '',
+    description: 'Looking for professional advice on redesigning my garden layout. One-hour consultation only, no physical work needed.',
+    timeAgo: '3 days ago',
+    distance: '60 mins',
+    credits: 25,
+    updatedAt: '2 days ago'
+  }
+];
