@@ -19,8 +19,8 @@ const Featured = () => {
   ];
 
   return (
-    <section className="py-12 bg-white border-y">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+    <section className="py-12 bg-white">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6">
         {/* Heading */}
         <h3
           className="text-center text-2xl font-bold mb-10"

@@ -11,7 +11,7 @@ const GetPriceCTA = () => {
           Ready to get a price for your home improvement project?
         </h2>
         <button
-          className="px-6 py-3 rounded-lg text-white font-semibold text-lg transition-colors duration-300"
+          className="px-6 py-3 rounded-lg text-white font-semibold text-lg transition-colors duration-300 cursor-pointer"
           style={{ backgroundColor: "#00A896" }}
           onMouseEnter={e => e.currentTarget.style.backgroundColor = "#40D4E8"}
           onMouseLeave={e => e.currentTarget.style.backgroundColor = "#00A896"}

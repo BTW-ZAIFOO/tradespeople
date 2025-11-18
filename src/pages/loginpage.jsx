@@ -12,10 +12,11 @@ const LoginPage = () => {
 
       {/* Login Section */}
       <div className="flex justify-center items-center min-h-screen bg-[#f6f9ff]">
-        <div className="bg-white shadow-md rounded-md p-10 w-[400px] mt-10 mb-10">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Login</h1>
+        <div className="bg-white shadow-md rounded-md p-8 mt-10 mb-10">
+          <h1 className="text-3xl font-bold text-gray-800 my-6">Login</h1>
           <p className="text-gray-700 mb-6">
-            Access your <span className="font-semibold">MyTradeLinks</span> account.
+            Access your <span className="font-semibold">MyTradeLinks</span>{" "}
+            account.
           </p>
 
           {/* Email */}
@@ -65,17 +66,19 @@ const LoginPage = () => {
 
           {/* Buttons */}
           <div className="flex items-center mb-6">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-md">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-md cursor-pointer">
               Login
             </button>
             <span className="mx-3 text-gray-600 text-sm">or</span>
             <a
-  href="/login-link"
-  className="border border-blue-500 text-blue-600 font-semibold py-2 px-6 rounded-md hover:bg-blue-50"
->
-  Email me a link to login
-</a>
-
+              href="/login-link"
+              className="
+              border border-blue-500 text-blue-600 font-semibold 
+              py-2 px-6 rounded-md hover:bg-blue-50
+              w-full sm:w-auto text-center block text-xs sm:text-sm"
+            >
+              Email me a link to login
+            </a>
           </div>
 
           {/* Create Account */}

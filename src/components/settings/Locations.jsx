@@ -68,7 +68,7 @@ const Locations = () => {
           <div className="flex items-end">
             <button
               onClick={addLocation}
-              className="w-full px-4 py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition"
+              className="w-full px-4 py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition cursor-pointer"
             >
               Add Location
             </button>
@@ -86,7 +86,7 @@ const Locations = () => {
             </div>
             <button
               onClick={() => removeLocation(location.id)}
-              className="text-red-500 hover:text-red-700 font-semibold text-sm"
+              className="text-red-500 hover:text-red-700 font-semibold text-sm cursor-pointer"
             >
               Remove
             </button>
@@ -94,7 +94,7 @@ const Locations = () => {
         ))}
       </div>
 
-      <button className="mt-8 px-8 py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition">
+      <button className="mt-8 px-8 py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition cursor-pointer">
         Save Locations
       </button>
     </div>

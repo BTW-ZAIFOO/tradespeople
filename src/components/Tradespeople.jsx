@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { Star, MapPin, Users } from 'lucide-react';
+import React, { useState } from "react";
+import { Star, MapPin, Users } from "lucide-react";
 import FindTradesmanCTA from "../components/FindTradesmanCTA";
 
-
 const Tradespeople = ({ locationName, tradespeople = [] }) => {
-  const [filterDistance, setFilterDistance] = useState('60');
-  const [filterRating, setFilterRating] = useState('any');
-  const [sortBy, setSortBy] = useState('recommended');
+  const [filterDistance, setFilterDistance] = useState("60");
+  const [filterRating, setFilterRating] = useState("any");
+  const [sortBy, setSortBy] = useState("recommended");
 
   const totalTradespeople = 46100;
 
@@ -21,15 +20,16 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
         stars.push(
           <div key={i} className="relative w-4 h-4">
             <Star className="w-4 h-4 text-gray-300" />
-            <div className="absolute top-0 left-0 overflow-hidden" style={{ width: `${(rating % 1) * 100}%` }}>
+            <div
+              className="absolute top-0 left-0 overflow-hidden"
+              style={{ width: `${(rating % 1) * 100}%` }}
+            >
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
             </div>
           </div>
         );
       } else {
-        stars.push(
-          <Star key={i} className="w-4 h-4 text-gray-300" />
-        );
+        stars.push(<Star key={i} className="w-4 h-4 text-gray-300" />);
       }
     }
     return stars;
@@ -38,14 +38,12 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4">
-
-
-          <div className="flex items-center mb-6">
-      <div className="w-1.5 h-6 bg-blue-600 mr-3 rounded-sm"></div>
-      <h2 className="text-lg font-bold text-[#1e4db7] tracking-wide">
-       TRADESPEOPLE IN {locationName.toUpperCase()} 
-      </h2>
-    </div>
+        <div className="flex items-center mb-6">
+          <div className="w-1.5 h-6 bg-blue-600 mr-3 rounded-sm"></div>
+          <h2 className="text-lg font-bold text-[#1e4db7] tracking-wide">
+            TRADESPEOPLE IN {locationName.toUpperCase()}
+          </h2>
+        </div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -101,7 +99,10 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
             {/* Tradespeople Cards */}
             <div className="space-y-6">
               {tradespeople.slice(0, 20).map((tradesperson) => (
-                <div key={tradesperson.id} className="bg-white rounded-lg shadow-md p-6">
+                <div
+                  key={tradesperson.id}
+                  className="bg-white rounded-lg shadow-md p-6"
+                >
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Logo Section */}
                     <div className="md:w-20 shrink-0">
@@ -128,16 +129,16 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
                               {renderStars(tradesperson.rating)}
                             </div>
                             <span className="text-sm text-gray-600">
-                              {tradesperson.rating} rating, based on {tradesperson.reviewCount} reviews
+                              {tradesperson.rating} rating, based on{" "}
+                              {tradesperson.reviewCount} reviews
                             </span>
                           </div>
                         </div>
 
                         {/* PROFILE Button */}
-                       <button className="px-4 py-2 border-2 border-[#40D4E8] bg-[#40D4E8] text-white rounded font-bold text-xs whitespace-nowrap hover:bg-[#00A896] transition">
-  PROFILE
-</button>
-
+                        <button className="px-4 py-2 border-2 border-[#40D4E8] bg-[#40D4E8] text-white rounded font-bold text-xs whitespace-nowrap hover:bg-[#00A896] transition cursor-pointer">
+                          PROFILE
+                        </button>
                       </div>
 
                       {/* Description */}
@@ -154,7 +155,9 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
                           {tradesperson.latestReview.text}
                         </p>
                         <p className="text-xs text-gray-500">
-                          Reviewed by <strong>{tradesperson.latestReview.reviewer}</strong> on {tradesperson.latestReview.date}
+                          Reviewed by{" "}
+                          <strong>{tradesperson.latestReview.reviewer}</strong>{" "}
+                          on {tradesperson.latestReview.date}
                         </p>
                       </div>
 
@@ -189,14 +192,15 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
             {/* Reviews Card */}
             <div className="bg-white rounded-lg shadow-md p-6 mb-6 sticky top-4">
               <p className="text-center text-sm text-gray-600 mb-3">
-                Read our <strong>{tradespeople[0]?.totalReviews.toLocaleString()}</strong> reviews
+                Read our{" "}
+                <strong>
+                  {tradespeople[0]?.totalReviews.toLocaleString()}
+                </strong>{" "}
+                reviews
               </p>
-              
+
               <div className="flex justify-center mb-3">
-                <div className="flex gap-1">
-                  {renderStars(4.7)}
-                  
-                </div>
+                <div className="flex gap-1">{renderStars(4.7)}</div>
               </div>
 
               <p className="text-center text-3xl font-bold text-gray-800 mb-2">
@@ -214,121 +218,121 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
               <hr className="my-4" />
 
               {/* Become a Member */}
-             <div className="text-center">
-  <h3 className="text-lg font-bold text-gray-800 mb-2">
-    Become a member
-  </h3>
-  <p className="text-sm text-gray-600 mb-4">
-    Over 50,000 tradespeople nationwide use MyTradeLinks
-  </p>
-  <button className="w-full px-4 py-3 border-2 border-[#40D4E8] bg-[#40D4E8] text-white rounded font-bold text-sm hover:bg-[#00A896] transition">
-    SIGN UP AS A TRADE
-  </button>
-</div>
-
+              <div className="text-center">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">
+                  Become a member
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Over 50,000 tradespeople nationwide use MyTradeLinks
+                </p>
+                <button className="w-full px-4 py-3 border-2 border-[#40D4E8] bg-[#40D4E8] text-white rounded font-bold text-sm hover:bg-[#00A896] transition cursor-pointer">
+                  SIGN UP AS A TRADE
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Load More */}
-     <div className="text-center mt-12">
-  <button className="px-8 py-3 bg-[#40D4E8] text-white rounded-lg font-semibold hover:bg-[#00A896] transition">
-    Load More Tradespeople
-  </button>
-</div>
-
+        <div className="text-center mt-12">
+          <button className="px-8 py-3 bg-[#40D4E8] text-white rounded-lg font-semibold hover:bg-[#00A896] transition cursor-pointer">
+            Load More Tradespeople
+          </button>
+        </div>
       </div>
       {/* ================= RECENT QUESTIONS SECTION ================= */}
-<section className="bg-[#f4f8ff] py-16 mt-16">
-  <div className="max-w-7xl mx-auto px-4">
-    {/* Heading */}
-    <div className="flex items-center mb-8">
-      <div className="w-1.5 h-6 bg-blue-600 mr-3 rounded-sm"></div>
-      <h2 className="text-lg font-bold text-[#1e4db7] tracking-wide uppercase">
-        Recent Questions
-      </h2>
-    </div>
+      <section className="bg-[#f4f8ff] py-16 mt-16">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Heading */}
+          <div className="flex items-center mb-8">
+            <div className="w-1.5 h-6 bg-blue-600 mr-3 rounded-sm"></div>
+            <h2 className="text-lg font-bold text-[#1e4db7] tracking-wide uppercase">
+              Recent Questions
+            </h2>
+          </div>
 
-    {/* Questions Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {[
-        {
-          title: "Cost of a new front door",
-          trade: "WINDOW & CONSERVATORY SPECIALIST",
-          desc: "Can anyone give me an estimate of how much it costs to fit a new front door, including the door and labour?",
-          answers: 5,
-          askedBy: "Pete",
-          time: "19 hours ago",
-        },
-        {
-          title: "Who should I ask to do the brickwork inspection?",
-          trade: "BRICKLAYER",
-          desc: "I have changed two courses DPC bricks. It’s a small project, who should I ask to do the brickwork inspection?",
-          answers: 4,
-          askedBy: "Jessica",
-          time: "3 days ago",
-        },
-        {
-          title: "How can I fix an E125 error on my boiler?",
-          trade: "HEATING ENGINEER",
-          desc: "My boiler is showing an E125 error code and has stopped working. What does this mean and how do I sort it out?",
-          answers: 1,
-          askedBy: "Claire Kate",
-          time: "5 days ago",
-        },
-        {
-          title: "How many days should newly installed DPC bricks dry?",
-          trade: "BRICKLAYER",
-          desc: "How many days should newly installed DPC bricks covered by Tarpaulin sheet not exposed to rain?",
-          answers: 4,
-          askedBy: "Michael",
-          time: "1 week ago",
-        },
-        {
-          title: "Should 3:1 mix be waterproof for DPC bricks?",
-          trade: "BRICKLAYER",
-          desc: "Should 3:1 mix to be waterproof for the new DPC bricks? Should I ask them to redo the work?",
-          answers: 3,
-          askedBy: "David",
-          time: "2 weeks ago",
-        },
-        {
-          title: "Why is my shower running cold while taps are hot?",
-          trade: "HEATING ENGINEER",
-          desc: "The hot water works fine from my taps, but the shower only gives cold water. Something I can fix myself perhaps?",
-          answers: 1,
-          askedBy: "Emma",
-          time: "1 week ago",
-        },
-      ].map((q, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition"
-        >
-          <h3 className="font-bold text-lg text-gray-800 mb-1 line-clamp-1">
-            {q.title}
-          </h3>
-          <p className="uppercase text-xs text-gray-500 font-semibold mb-2">
-            {q.trade}
-          </p>
-          <p className="text-gray-600 text-sm mb-3 line-clamp-3">{q.desc}</p>
+          {/* Questions Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Cost of a new front door",
+                trade: "WINDOW & CONSERVATORY SPECIALIST",
+                desc: "Can anyone give me an estimate of how much it costs to fit a new front door, including the door and labour?",
+                answers: 5,
+                askedBy: "Pete",
+                time: "19 hours ago",
+              },
+              {
+                title: "Who should I ask to do the brickwork inspection?",
+                trade: "BRICKLAYER",
+                desc: "I have changed two courses DPC bricks. It’s a small project, who should I ask to do the brickwork inspection?",
+                answers: 4,
+                askedBy: "Jessica",
+                time: "3 days ago",
+              },
+              {
+                title: "How can I fix an E125 error on my boiler?",
+                trade: "HEATING ENGINEER",
+                desc: "My boiler is showing an E125 error code and has stopped working. What does this mean and how do I sort it out?",
+                answers: 1,
+                askedBy: "Claire Kate",
+                time: "5 days ago",
+              },
+              {
+                title: "How many days should newly installed DPC bricks dry?",
+                trade: "BRICKLAYER",
+                desc: "How many days should newly installed DPC bricks covered by Tarpaulin sheet not exposed to rain?",
+                answers: 4,
+                askedBy: "Michael",
+                time: "1 week ago",
+              },
+              {
+                title: "Should 3:1 mix be waterproof for DPC bricks?",
+                trade: "BRICKLAYER",
+                desc: "Should 3:1 mix to be waterproof for the new DPC bricks? Should I ask them to redo the work?",
+                answers: 3,
+                askedBy: "David",
+                time: "2 weeks ago",
+              },
+              {
+                title: "Why is my shower running cold while taps are hot?",
+                trade: "HEATING ENGINEER",
+                desc: "The hot water works fine from my taps, but the shower only gives cold water. Something I can fix myself perhaps?",
+                answers: 1,
+                askedBy: "Emma",
+                time: "1 week ago",
+              },
+            ].map((q, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition"
+              >
+                <h3 className="font-bold text-lg text-gray-800 mb-1 line-clamp-1">
+                  {q.title}
+                </h3>
+                <p className="uppercase text-xs text-gray-500 font-semibold mb-2">
+                  {q.trade}
+                </p>
+                <p className="text-gray-600 text-sm mb-3 line-clamp-3">
+                  {q.desc}
+                </p>
 
-          <p className="text-orange-500 font-semibold text-sm mb-3">
-            {q.answers} {q.answers === 1 ? "answer" : "answers"}
-          </p>
+                <p className="text-orange-500 font-semibold text-sm mb-3">
+                  {q.answers} {q.answers === 1 ? "answer" : "answers"}
+                </p>
 
-          <p className="text-xs text-gray-500">
-            Asked by <span className="font-semibold">{q.askedBy}</span>, {q.time}
-          </p>
+                <p className="text-xs text-gray-500">
+                  Asked by <span className="font-semibold">{q.askedBy}</span>,{" "}
+                  {q.time}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
+      </section>
+      {/* === FIND TRADESMAN CTA SECTION === */}
+      <FindTradesmanCTA />
     </div>
-  </div>
-</section>
-{/* === FIND TRADESMAN CTA SECTION === */}
-<FindTradesmanCTA />
-    </div>
-    
   );
 };
 

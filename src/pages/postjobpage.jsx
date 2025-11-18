@@ -41,14 +41,48 @@ const jobCategories = [
       "Other",
     ],
   },
-  { name: "Carpentry / Joinery", subOptions: ["Furniture Assembly", "Door & Frame Work", "Wood Repairs", "Other"] },
-  { name: "Electrical Work", subOptions: ["Light Installation", "Rewiring", "Socket Fitting", "Other"] },
-  { name: "Heating / Gas Work", subOptions: ["Boiler Installation", "Boiler Repair", "Central Heating Work", "Other"] },
-  { name: "Plastering & Rendering", subOptions: ["Ceiling Plaster", "Wall Plaster", "Rendering", "Other"] },
-  { name: "Gardening & Landscaping", subOptions: ["Lawn Maintenance", "Tree Cutting", "Paving", "Other"] },
-  { name: "Roofing", subOptions: ["New Roof", "Roof Repairs", "Flat Roofing", "Other"] },
-  { name: "Building", subOptions: ["Extensions", "Renovations", "Conversions", "Other"] },
-  { name: "Handyman", subOptions: ["Small Repairs", "Mounting & Fittings", "Odd Jobs", "Other"] },
+  {
+    name: "Carpentry / Joinery",
+    subOptions: [
+      "Furniture Assembly",
+      "Door & Frame Work",
+      "Wood Repairs",
+      "Other",
+    ],
+  },
+  {
+    name: "Electrical Work",
+    subOptions: ["Light Installation", "Rewiring", "Socket Fitting", "Other"],
+  },
+  {
+    name: "Heating / Gas Work",
+    subOptions: [
+      "Boiler Installation",
+      "Boiler Repair",
+      "Central Heating Work",
+      "Other",
+    ],
+  },
+  {
+    name: "Plastering & Rendering",
+    subOptions: ["Ceiling Plaster", "Wall Plaster", "Rendering", "Other"],
+  },
+  {
+    name: "Gardening & Landscaping",
+    subOptions: ["Lawn Maintenance", "Tree Cutting", "Paving", "Other"],
+  },
+  {
+    name: "Roofing",
+    subOptions: ["New Roof", "Roof Repairs", "Flat Roofing", "Other"],
+  },
+  {
+    name: "Building",
+    subOptions: ["Extensions", "Renovations", "Conversions", "Other"],
+  },
+  {
+    name: "Handyman",
+    subOptions: ["Small Repairs", "Mounting & Fittings", "Odd Jobs", "Other"],
+  },
 ];
 
 const PostJobPage = () => {
@@ -65,7 +99,7 @@ const PostJobPage = () => {
       {/* Header */}
       <header className="w-full py-6 flex justify-center items-center bg-[#f3f8ff]">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="MyJobQuote Logo" className="h-30" />
+          <img src={logo} alt="MyTradeLinks Logo" className="h-30" />
           <h1 className="text-3xl font-bold">
             {/* <span className="text-[#0076CE]">my</span>
             <span className="text-[#F24444]">job</span>
@@ -79,14 +113,18 @@ const PostJobPage = () => {
         <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-center">
           <h2 className="text-2xl font-semibold mb-2">Find a Tradesperson</h2>
           <p className="text-[#505566] mb-4 leading-relaxed">
-            Get FREE Quotes from up to 3 local tradespeople with our quick and easy connection platform.
-            Compare quotes & save money on your job!
+            Get FREE Quotes from up to 3 local tradespeople with our quick and
+            easy connection platform. Compare quotes & save money on your job!
           </p>
-          <p className="font-medium mb-3">What type of work do you need doing?</p>
+          <p className="font-medium mb-3">
+            What type of work do you need doing?
+          </p>
 
           <select
             onChange={(e) => {
-              const selected = jobCategories.find((cat) => cat.name === e.target.value);
+              const selected = jobCategories.find(
+                (cat) => cat.name === e.target.value
+              );
               setSelectedCategory(selected);
             }}
             className="w-full border rounded-md px-4 py-3 bg-white focus:ring-2 focus:ring-[#0076CE]"
@@ -105,7 +143,8 @@ const PostJobPage = () => {
           {selectedCategory && (
             <div className="mt-8">
               <h3 className="text-lg font-semibold mb-3">
-                What type of {selectedCategory.name.toLowerCase()} work do you need?
+                What type of {selectedCategory.name.toLowerCase()} work do you
+                need?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {selectedCategory.subOptions.map((option, index) => (
@@ -126,15 +165,6 @@ const PostJobPage = () => {
         </section>
       )}
 
-      {step > 1 && (
-        <button
-          onClick={prevStep}
-          className="self-start ml-8 mt-4 text-[#0076CE] underline"
-        >
-          &larr; Back
-        </button>
-      )}
-
       {step === 2 && (
         <section className="w-full max-w-2xl mt-2 bg-white shadow-sm rounded-lg p-8 text-left">
           <h3 className="text-xl font-semibold mb-2">Tell us about your job</h3>
@@ -143,12 +173,22 @@ const PostJobPage = () => {
             className="w-full border rounded-md p-3 mb-4 focus:ring-2 focus:ring-[#0076CE]"
             placeholder="Example: Lay external tiles on patio, about 20 square metres, provide slip resistant tiles."
           ></textarea>
-          <button
-            onClick={nextStep}
-            className="bg-[#0076CE] text-white px-6 py-2 rounded-md hover:bg-[#005fa3]"
-          >
-            Continue
-          </button>
+          <div className="flex justify-between">
+            <button
+              onClick={nextStep}
+              className="bg-[#0076CE] text-white px-6 py-2 rounded-md hover:bg-[#005fa3] cursor-pointer"
+            >
+              Continue
+            </button>
+            {step > 1 && (
+              <button
+                onClick={prevStep}
+                className="bg-[#0076CE] text-white px-6 py-2 rounded-md hover:bg-[#005fa3] cursor-pointer"
+              >
+                Back
+              </button>
+            )}
+          </div>
         </section>
       )}
 
@@ -156,12 +196,22 @@ const PostJobPage = () => {
       {step === 3 && (
         <section className="w-full max-w-2xl mt-2 bg-white shadow-sm rounded-lg p-8 text-center">
           <h3 className="text-xl font-semibold mb-2">Add photos (OPTIONAL)</h3>
-          <input type="file" multiple className="mb-4" />
+          <input
+            type="file"
+            multiple
+            className="mb-4 border-2 p-6 rounded-md border-gray-300"
+          />
           <div className="flex justify-center gap-4">
-            <button onClick={nextStep} className="bg-[#0076CE] text-white px-6 py-2 rounded-md">
+            <button
+              onClick={nextStep}
+              className="bg-[#0076CE] text-white px-6 py-2 rounded-md cursor-pointer"
+            >
               Continue
             </button>
-            <button onClick={nextStep} className="text-[#0076CE] underline">
+            <button
+              onClick={nextStep}
+              className="text-[#0076CE] underline ml-3 cursor-pointer"
+            >
               Skip
             </button>
           </div>
@@ -170,7 +220,7 @@ const PostJobPage = () => {
 
       {/* Continue remaining steps like Step 4, 5, 6, 7, 8 with same Back button logic */}
       {/* ...same as your existing code... */}
-  {/* Step 4: Location */}
+      {/* Step 4: Location */}
       {step === 4 && (
         <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
           <h3 className="text-xl font-semibold mb-3">Job Location</h3>
@@ -179,17 +229,39 @@ const PostJobPage = () => {
             placeholder="Enter postcode (e.g., CH3 5AX)"
             className="w-full border rounded-md p-3 mb-4 focus:ring-2 focus:ring-[#0076CE]"
           />
-          <button onClick={nextStep} className="bg-[#0076CE] text-white px-6 py-2 rounded-md">Continue</button>
+          <button
+            onClick={nextStep}
+            className="bg-[#0076CE] text-white px-6 py-2 rounded-md cursor-pointer"
+          >
+            Continue
+          </button>
         </section>
       )}
 
       {/* Step 5: Budget */}
       {step === 5 && (
         <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
-          <h3 className="text-xl font-semibold mb-3">What's your estimated budget?</h3>
+          <h3 className="text-xl font-semibold mb-3">
+            What's your estimated budget?
+          </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
-            {["Under £100", "Under £250", "Under £500", "Under £1,000", "Under £2,000", "Under £4,000", "Under £8,000", "Under £15,000", "Over £30,000", "Not Sure"].map((b, i) => (
-              <button key={i} onClick={nextStep} className="border rounded-md py-2 hover:bg-[#e9f2ff]">
+            {[
+              "Under £100",
+              "Under £250",
+              "Under £500",
+              "Under £1,000",
+              "Under £2,000",
+              "Under £4,000",
+              "Under £8,000",
+              "Under £15,000",
+              "Over £30,000",
+              "Not Sure",
+            ].map((b, i) => (
+              <button
+                key={i}
+                onClick={nextStep}
+                className="border rounded-md py-2 hover:bg-[#e9f2ff] cursor-pointer"
+              >
                 {b}
               </button>
             ))}
@@ -200,10 +272,22 @@ const PostJobPage = () => {
       {/* Step 6: Start Date */}
       {step === 6 && (
         <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
-          <h3 className="text-xl font-semibold mb-3">When would you like the work to start?</h3>
+          <h3 className="text-xl font-semibold mb-3">
+            When would you like the work to start?
+          </h3>
           <div className="flex flex-col gap-3">
-            {["ASAP", "Within 2 days", "Within 2 weeks", "Within 2 months", "Flexible"].map((t, i) => (
-              <button key={i} onClick={nextStep} className="border rounded-md py-2 hover:bg-[#e9f2ff]">
+            {[
+              "ASAP",
+              "Within 2 days",
+              "Within 2 weeks",
+              "Within 2 months",
+              "Flexible",
+            ].map((t, i) => (
+              <button
+                key={i}
+                onClick={nextStep}
+                className="border rounded-md py-2 hover:bg-[#e9f2ff] cursor-pointer"
+              >
                 {t}
               </button>
             ))}
@@ -220,7 +304,12 @@ const PostJobPage = () => {
             placeholder="john.doe@example.com"
             className="w-full border rounded-md p-3 mb-4 focus:ring-2 focus:ring-[#0076CE]"
           />
-          <button onClick={nextStep} className="bg-[#0076CE] text-white px-6 py-2 rounded-md">Continue</button>
+          <button
+            onClick={nextStep}
+            className="bg-[#0076CE] text-white px-6 py-2 rounded-md cursor-pointer"
+          >
+            Continue
+          </button>
         </section>
       )}
 
@@ -229,18 +318,33 @@ const PostJobPage = () => {
         <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
           <h3 className="text-xl font-semibold mb-3">Your Account</h3>
           <div className="space-y-3">
-            <input type="text" placeholder="First name" className="w-full border rounded-md p-3" />
-            <input type="text" placeholder="Last name" className="w-full border rounded-md p-3" />
-            <input type="text" placeholder="Phone number" className="w-full border rounded-md p-3" />
-            <input type="password" placeholder="Create a password" className="w-full border rounded-md p-3" />
+            <input
+              type="text"
+              placeholder="First name"
+              className="w-full border rounded-md p-3"
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              className="w-full border rounded-md p-3"
+            />
+            <input
+              type="text"
+              placeholder="Phone number"
+              className="w-full border rounded-md p-3"
+            />
+            <input
+              type="password"
+              placeholder="Create a password"
+              className="w-full border rounded-md p-3"
+            />
             <label className="flex items-center gap-2 text-sm">
-              <input type="checkbox" /> I accept MyJobQuote's Terms of Use & Privacy Policy
+              <input type="checkbox" /> I accept MyTradeLinks's Terms of Use &
+              Privacy Policy
             </label>
             <button
-      onClick={() => navigate("/dashboard/homeowner")}
-
-
-              className="bg-[#0076CE] text-white px-6 py-2 rounded-md mt-3 hover:bg-[#005fa3]"
+              onClick={() => navigate("/dashboard/homeowner")}
+              className="bg-[#0076CE] text-white px-6 py-2 rounded-md mt-3 hover:bg-[#005fa3] cursor-pointer"
             >
               Get Quotes
             </button>
@@ -259,8 +363,3 @@ const PostJobPage = () => {
 };
 
 export default PostJobPage;
-
-
-
-
-

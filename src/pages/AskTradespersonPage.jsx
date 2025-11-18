@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const AskTradespersonPage = () => {
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-4">Ask a Tradesperson</h1>
-      <p className="mb-6">Got a question? Fill out the form below and a tradesperson will answer you.</p>
-      
+      <p className="mb-6">
+        Got a question? Fill out the form below and a tradesperson will answer
+        you.
+      </p>
+
       <form className="space-y-4">
         <input
           type="text"
@@ -18,7 +21,7 @@ const AskTradespersonPage = () => {
         />
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition cursor-pointer"
         >
           Submit Question
         </button>

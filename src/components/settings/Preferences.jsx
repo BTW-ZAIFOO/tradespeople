@@ -129,7 +129,7 @@ const Preferences = () => {
         </div>
       </div>
 
-      <button className="px-8 py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition">
+      <button className="px-8 py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition cursor-pointer">
         Save Preferences
       </button>
     </div>

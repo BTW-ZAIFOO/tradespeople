@@ -1,50 +1,55 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import QuickAccessCards from '../components/dashboard/QuickAccessCards';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import QuickAccessCards from "../components/dashboard/QuickAccessCards";
 
 const ContactSupportPage = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-    priority: 'normal'
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    priority: "normal",
   });
 
   const handleInputChange = (field, value) => {
     setFormData({
       ...formData,
-      [field]: value
+      [field]: value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
-    alert('Your message has been sent. We\'ll get back to you within 24 hours.');
-    navigate('/dashboard/support');
+    alert("Your message has been sent. We'll get back to you within 24 hours.");
+    navigate("/dashboard/support");
   };
 
   return (
-    <div className="p-6 bg-gray-50 min-h-full">
-      <div className="max-w-4xl mx-auto">
-        {/* Quick Access Cards */}
+    <div className="bg-gray-50 min-h-full">
+      
+       {/* Quick Access Cards */}
         <QuickAccessCards />
-
+      <div className="max-w-6xl mx-auto p-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Contact Information */}
           <div className="md:col-span-1 space-y-4">
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-4">Contact Information</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4">
+                Contact Information
+              </h3>
 
               <div className="space-y-4">
                 <div>
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">
                     Email
                   </p>
-                  <a href="mailto:support@myjobquote.com" className="text-orange-500 hover:text-orange-600 font-medium">
-                    support@myjobquote.com
+                  <a
+                    href="mailto:support@MyTradeLinks.com"
+                    className="text-orange-500 hover:text-orange-600 font-medium"
+                  >
+                    support@MyTradeLinks.com
                   </a>
                 </div>
 
@@ -52,7 +57,10 @@ const ContactSupportPage = () => {
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">
                     Phone
                   </p>
-                  <a href="tel:+441234567890" className="text-orange-500 hover:text-orange-600 font-medium">
+                  <a
+                    href="tel:+441234567890"
+                    className="text-orange-500 hover:text-orange-600 font-medium"
+                  >
                     +44 (0) 1234 567890
                   </a>
                 </div>
@@ -62,8 +70,10 @@ const ContactSupportPage = () => {
                     Hours
                   </p>
                   <p className="text-gray-600 text-sm">
-                    Monday - Friday<br />
-                    9:00 AM - 6:00 PM<br />
+                    Monday - Friday
+                    <br />
+                    9:00 AM - 6:00 PM
+                    <br />
                     Saturday: 10:00 AM - 4:00 PM
                   </p>
                 </div>
@@ -73,9 +83,12 @@ const ContactSupportPage = () => {
                     Office
                   </p>
                   <p className="text-gray-600 text-sm">
-                    MyJobQuote Ltd<br />
-                    123 Business Street<br />
-                    London, UK<br />
+                    MyTradeLinks Ltd
+                    <br />
+                    123 Business Street
+                    <br />
+                    London, UK
+                    <br />
                     SW1A 1AA
                   </p>
                 </div>
@@ -83,9 +96,12 @@ const ContactSupportPage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-4">Response Time</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4">
+                Response Time
+              </h3>
               <p className="text-gray-600 text-sm mb-4">
-                We aim to respond to all inquiries within 24 hours during business hours.
+                We aim to respond to all inquiries within 24 hours during
+                business hours.
               </p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center">
@@ -109,8 +125,8 @@ const ContactSupportPage = () => {
             <div className="bg-white rounded-lg shadow-sm p-8">
               <div className="mb-6">
                 <button
-                  onClick={() => navigate('/dashboard/support')}
-                  className="text-orange-500 hover:text-orange-600 font-semibold flex items-center gap-2 mb-4"
+                  onClick={() => navigate("/dashboard/support")}
+                  className="text-orange-500 hover:text-orange-600 font-semibold flex items-center gap-2 mb-4 cursor-pointer"
                 >
                   ← Back to Support
                 </button>
@@ -129,7 +145,9 @@ const ContactSupportPage = () => {
                     <input
                       type="text"
                       value={formData.name}
-                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("name", e.target.value)
+                      }
                       placeholder="Your name"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
                       required
@@ -142,7 +160,9 @@ const ContactSupportPage = () => {
                     <input
                       type="email"
                       value={formData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("email", e.target.value)
+                      }
                       placeholder="your@email.com"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
                       required
@@ -157,7 +177,9 @@ const ContactSupportPage = () => {
                   <input
                     type="text"
                     value={formData.subject}
-                    onChange={(e) => handleInputChange('subject', e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("subject", e.target.value)
+                    }
                     placeholder="What is this about?"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
                     required
@@ -170,7 +192,9 @@ const ContactSupportPage = () => {
                   </label>
                   <select
                     value={formData.priority}
-                    onChange={(e) => handleInputChange('priority', e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("priority", e.target.value)
+                    }
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
                   >
                     <option value="low">Low - General inquiry</option>
@@ -186,7 +210,9 @@ const ContactSupportPage = () => {
                   </label>
                   <textarea
                     value={formData.message}
-                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("message", e.target.value)
+                    }
                     placeholder="Please describe your issue in detail..."
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 resize-none h-40"
                     required
@@ -196,14 +222,14 @@ const ContactSupportPage = () => {
                 <div className="flex gap-4">
                   <button
                     type="submit"
-                    className="px-8 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition"
+                    className="px-8 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition cursor-pointer"
                   >
                     Send Message
                   </button>
                   <button
                     type="button"
-                    onClick={() => navigate('/dashboard/support')}
-                    className="px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition"
+                    onClick={() => navigate("/dashboard/support")}
+                    className="px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition cursor-pointer"
                   >
                     Cancel
                   </button>
@@ -212,12 +238,21 @@ const ContactSupportPage = () => {
 
               {/* Help Tips */}
               <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="font-semibold text-gray-800 mb-4">Helpful Tips</h3>
+                <h3 className="font-semibold text-gray-800 mb-4">
+                  Helpful Tips
+                </h3>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Be as detailed as possible to help us understand your issue</li>
-                  <li>• Include relevant order or account details if applicable</li>
+                  <li>
+                    • Be as detailed as possible to help us understand your
+                    issue
+                  </li>
+                  <li>
+                    • Include relevant order or account details if applicable
+                  </li>
                   <li>• Attach screenshots or documents if needed</li>
-                  <li>• Mark urgent issues appropriately for faster response</li>
+                  <li>
+                    • Mark urgent issues appropriately for faster response
+                  </li>
                 </ul>
               </div>
             </div>

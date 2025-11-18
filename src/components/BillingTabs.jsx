@@ -38,7 +38,7 @@ const BillingTabs = ({ activeTab: initialTab = 'payment' }) => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-4 font-medium text-sm transition-colors border-b-2 ${
+              className={`px-6 py-4 font-medium text-sm transition-colors border-b-2 cursor-pointer ${
                 activeTab === tab.id
                   ? 'border-orange-500 text-orange-600'
                   : 'border-transparent text-gray-600 hover:text-gray-900'

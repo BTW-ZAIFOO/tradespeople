@@ -1,4 +1,4 @@
-// Comprehensive locations data for MyJobQuote
+// Comprehensive locations data for MyTradeLinks
 export const locationsData = {
   london: {
     id: 'london',

@@ -68,7 +68,7 @@ const PaymentMethods = () => {
             />
             <button
               type="button"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded cursor-pointer"
             >
               Autofill link
             </button>
@@ -110,7 +110,7 @@ const PaymentMethods = () => {
             />
             <button
               type="button"
-              className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition"
+              className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition cursor-pointer"
             >
               Search
             </button>
@@ -119,7 +119,7 @@ const PaymentMethods = () => {
 
         <button
           type="submit"
-          className="w-full px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition"
+          className="w-full px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition cursor-pointer"
         >
           Add Card
         </button>

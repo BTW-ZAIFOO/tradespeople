@@ -9,7 +9,7 @@ const UpgradeTradesperson = () => {
       <Header />
 
       {/* Main Form Section */}
-      <div className="flex-grow flex justify-center items-start py-16">
+      <div className="grow flex justify-center items-start py-16">
         <div className="bg-white shadow-md rounded-md p-10 w-full max-w-4xl">
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
             Upgrade To Tradesperson
@@ -19,7 +19,7 @@ const UpgradeTradesperson = () => {
           <p className="text-gray-600 mb-8">
             <strong>Caution:</strong> Only complete this form if you wish to
             migrate your account to a tradesperson account in order to purchase
-            jobs from MyJobQuote.
+            jobs from MyTradeLinks.
           </p>
 
           {/* Form Grid */}
@@ -103,14 +103,14 @@ const UpgradeTradesperson = () => {
           <div className="mt-10 flex items-center justify-center gap-6">
             <button
               type="submit"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-2 rounded-md"
+              className="bg-orange-500  cursor-pointer hover:bg-orange-600 text-white font-medium px-8 py-2 rounded-md"
             >
               Upgrade
             </button>
             <button
               type="button"
               onClick={() => window.history.back()}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-2 rounded-md"
+              className="bg-blue-600 hover:bg-blue-700  cursor-pointer text-white font-medium px-8 py-2 rounded-md"
             >
               Back
             </button>

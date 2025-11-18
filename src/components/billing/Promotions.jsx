@@ -52,7 +52,7 @@ const Promotions = () => {
           />
           <button
             type="submit"
-            className="w-full sm:w-auto px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition"
+            className="w-full sm:w-auto px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition cursor-pointer"
           >
             Submit code
           </button>

@@ -1,41 +1,40 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
-
-import HomePage from './pages/HomePage';
-import HowItWorksPage from './pages/HowItWorksPage';
-import QuestionsPage from './pages/QuestionsPage';
-import CostGuidesPage from './pages/CostGuidesPage';
-import CategoryPage from './components/CategoryPage';
-import FindLocationPage from './components/FindLocationPage';
-import TradesLayout from './components/dashboard/TradesLayout';
-import HomeownerLayout from './components/dashboard/HomeownerLayout';
-import DashboardPage from './pages/DashboardPage';
-import HomeownerDashboardPage from './pages/HomeownerDashboardPage';
-import JobsPage from './pages/JobsPage';
-import ReviewsPage from './pages/ReviewsPage';
-import CreditsPage from './pages/CreditsPage';
-import MembershipPage from './pages/MembershipPage';
-import AddonsPage from './pages/AddonsPage';
-import BillingPage from './pages/BillingPage';
-import RewardsPage from './pages/RewardsPage';
-import QAPage from './pages/QAPage';
-import SettingsPage from './pages/SettingsPage';
-import ProfilePage from './pages/ProfilePage';
-import SupportPage from './pages/SupportPage';
-import FAQPage from './pages/FAQPage';
-import DisputePage from './pages/DisputePage';
-import ContactSupportPage from './pages/ContactSupportPage';
-import TicketsPage from './pages/TicketsPage';
-import SignupTradePage from './pages/SignupTradePage';
+import HomePage from "./pages/HomePage";
+import HowItWorksPage from "./pages/HowItWorksPage";
+import QuestionsPage from "./pages/QuestionsPage";
+import CostGuidesPage from "./pages/CostGuidesPage";
+import CategoryPage from "./components/CategoryPage";
+import FindLocationPage from "./components/FindLocationPage";
+import TradesLayout from "./components/dashboard/TradesLayout";
+import HomeownerLayout from "./components/dashboard/HomeownerLayout";
+import DashboardPage from "./pages/DashboardPage";
+import HomeownerDashboardPage from "./pages/HomeownerDashboardPage";
+import JobsPage from "./pages/JobsPage";
+import ReviewsPage from "./pages/ReviewsPage";
+import CreditsPage from "./pages/CreditsPage";
+import MembershipPage from "./pages/MembershipPage";
+import AddonsPage from "./pages/AddonsPage";
+import BillingPage from "./pages/BillingPage";
+import RewardsPage from "./pages/RewardsPage";
+import QAPage from "./pages/QAPage";
+import SettingsPage from "./pages/SettingsPage";
+import ProfilePage from "./pages/ProfilePage";
+import SupportPage from "./pages/SupportPage";
+import FAQPage from "./pages/FAQPage";
+import DisputePage from "./pages/DisputePage";
+import ContactSupportPage from "./pages/ContactSupportPage";
+import TicketsPage from "./pages/TicketsPage";
+import SignupTradePage from "./pages/SignupTradePage";
 import PostJobPage from "./pages/PostJobPage";
 import UpgradeTradesperson from "./pages/UpgradeTradesperson";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-import LoginPage from "./pages/LoginPage";
+import LoginPage from "./pages/loginpage";
 import LoginLinkPage from "./pages/LoginLinkPage";
-import Careers from "./pages/Careers"; 
+import Careers from "./pages/Careers";
 import GettingStartedPage from "./pages/GettingStartedPage";
 
 function App() {
@@ -50,8 +49,8 @@ function App() {
         <Route path="/trade-signup" element={<SignupTradePage />} />
         <Route path="/post-job" element={<PostJobPage />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/login" element={<LoginPage />} /> 
-        <Route path="/login-link" element={<LoginLinkPage />} /> 
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login-link" element={<LoginLinkPage />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/getting-started" element={<GettingStartedPage />} />
         <Route path="/upgrade-tradesperson" element={<UpgradeTradesperson />} />
@@ -60,7 +59,7 @@ function App() {
         <Route path="/cost-guides" element={<CostGuidesPage />} />
         <Route path="/category/:slug" element={<CategoryPage />} />
         <Route path="/find/:location" element={<FindLocationPage />} />
-        
+
         {/* Homeowner Dashboard Routes */}
         <Route path="/dashboard/homeowner" element={<HomeownerLayout />}>
           <Route index element={<HomeownerDashboardPage />} />

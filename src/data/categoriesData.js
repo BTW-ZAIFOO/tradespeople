@@ -1,4 +1,4 @@
-// Comprehensive categories data - Professional MyJobQuote style layout
+// Comprehensive categories data - Professional MyTradeLinks style layout
 export const categoriesData = {
   builders: {
     id: 'builders',

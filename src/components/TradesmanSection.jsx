@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import tradesmanImg from '../assets/tradesman.png'; 
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import tradesmanImg from "../assets/tradesman.png";
 
 const TradesmanSection = () => {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const TradesmanSection = () => {
               Are you a tradesman?
             </h2>
             <p className="text-lg mb-6 text-gray-900 font-semibold leading-relaxed">
-              Looking for more work? At MyJobQuote <br />
+              Looking for more work? At MyTradeLinks <br />
               we provide fresh and local job leads for all <br />
               types of tradespeople across the UK.
             </p>
@@ -37,22 +37,22 @@ const TradesmanSection = () => {
             <button
               onClick={handleGetStarted}
               style={{
-                backgroundColor: '#40D4E8',
-                color: 'white',
-                border: 'none',
-                borderRadius: '8px',
-                padding: '12px 28px',
+                backgroundColor: "#40D4E8",
+                color: "white",
+                border: "none",
+                borderRadius: "8px",
+                padding: "12px 28px",
                 fontFamily: "'Poppins', sans-serif",
-                fontWeight: '600',
-                cursor: 'pointer',
-                fontSize: '16px',
-                transition: 'background-color 0.3s ease',
+                fontWeight: "600",
+                cursor: "pointer",
+                fontSize: "16px",
+                transition: "background-color 0.3s ease",
               }}
               onMouseOver={(e) =>
-                (e.target.style.backgroundColor = '(#40D4E8)')
+                (e.target.style.backgroundColor = "(#40D4E8)")
               }
               onMouseOut={(e) =>
-                (e.target.style.backgroundColor = 'rgb(40, 117, 215)')
+                (e.target.style.backgroundColor = "rgb(40, 117, 215)")
               }
             >
               Get started

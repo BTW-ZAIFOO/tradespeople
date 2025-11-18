@@ -6,12 +6,14 @@ const LoginLinkPage = () => {
   return (
     <>
       <Header /> {/* ✅ Top Header */}
-
       <div className="flex justify-center items-center min-h-screen bg-[#f6f9ff] py-20">
         <div className="bg-white shadow-md rounded-md p-10 w-[400px]">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Get a Login Link</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">
+            Get a Login Link
+          </h1>
           <p className="text-gray-700 mb-6">
-            We'll email you a secure link you can use to instantly access your account.
+            We'll email you a secure link you can use to instantly access your
+            account.
           </p>
 
           {/* Email Address */}
@@ -27,7 +29,7 @@ const LoginLinkPage = () => {
           </div>
 
           {/* Email me button */}
-          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md mb-4">
+          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md mb-4 cursor-pointer">
             Email me
           </button>
 
@@ -40,7 +42,6 @@ const LoginLinkPage = () => {
           </div>
         </div>
       </div>
-
       <Footer /> {/* ✅ Bottom Footer */}
     </>
   );

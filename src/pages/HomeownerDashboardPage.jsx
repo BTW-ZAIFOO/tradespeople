@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; 
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const HomeownerDashboardPage = () => {
@@ -44,7 +44,7 @@ const HomeownerDashboardPage = () => {
           </div>
           <div className="flex items-center gap-4">
             <p className="text-gray-500 text-sm">0 trades matched</p>
-            <button className="text-[#40D4E8] font-medium hover:underline">
+            <button className="text-[#40D4E8] font-medium hover:underline cursor-pointer">
               edit
             </button>
           </div>
@@ -55,7 +55,7 @@ const HomeownerDashboardPage = () => {
       <div className="text-center mt-8">
         <button
           onClick={() => navigate("/post-job")}
-          className="px-8 py-3 bg-[#00A896] text-white font-semibold rounded-md hover:bg-[#40D4E8] transition"
+          className="px-8 py-3 bg-[#00A896] text-white font-semibold rounded-md hover:bg-[#40D4E8] transition cursor-pointer"
         >
           Post another job
         </button>
@@ -68,7 +68,7 @@ const HomeownerDashboardPage = () => {
         </h2>
         <button
           onClick={() => setShowUpgradeModal(true)}
-          className="bg-[#00A896] text-white px-6 py-3 rounded-md hover:bg-[#40D4E8] transition"
+          className="bg-[#00A896] text-white px-6 py-3 rounded-md hover:bg-[#40D4E8] transition cursor-pointer"
         >
           Upgrade now
         </button>
@@ -80,7 +80,7 @@ const HomeownerDashboardPage = () => {
           <div className="bg-white rounded-lg p-8 w-[90%] sm:w-[500px] relative shadow-lg text-center">
             <button
               onClick={() => setShowUpgradeModal(false)}
-              className="absolute top-3 right-4 text-xl font-bold text-gray-500 hover:text-black"
+              className="absolute top-3 right-4 text-xl font-bold text-gray-500 hover:text-black cursor-pointer"
             >
               ×
             </button>
@@ -89,19 +89,19 @@ const HomeownerDashboardPage = () => {
             </h2>
             <div className="w-16 h-1 bg-[#40D4E8] mx-auto my-3 rounded"></div>
             <p className="text-gray-600 mb-8">
-              You should only change your account type to a tradesperson
-              account if you wish to purchase jobs from MyJobQuote.
+              You should only change your account type to a tradesperson account
+              if you wish to purchase jobs from MyTradeLinks.
             </p>
             <div className="flex justify-center gap-4">
               <button
                 onClick={() => navigate("/upgrade-tradesperson")}
-                className="bg-[#00A896] text-white px-6 py-2 rounded hover:bg-[#40D4E8] transition"
+                className="bg-[#00A896] text-white px-6 py-2 rounded hover:bg-[#40D4E8] transition cursor-pointer"
               >
                 Upgrade
               </button>
               <button
                 onClick={() => setShowUpgradeModal(false)}
-                className="bg-[#40D4E8] text-white px-6 py-2 rounded hover:bg-[#00A896] transition"
+                className="bg-[#40D4E8] text-white px-6 py-2 rounded hover:bg-[#00A896] transition cursor-pointer"
               >
                 Cancel
               </button>

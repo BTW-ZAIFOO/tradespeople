@@ -17,11 +17,11 @@ const Careers = () => {
 
             {/* Intro paragraph */}
             <p className="text-lg leading-relaxed text-gray-800 mb-8">
-              MyJobQuote.co.uk seeks to connect homeowners with local tradespeople. Since beginning operations in <strong>2014</strong>, we’ve received over <strong>1.5 million job quotes</strong> and have generated over <strong>£350 million</strong> worth of jobs for tradespeople in 2022.
+              MyTradeLinks.co.uk seeks to connect homeowners with local tradespeople. Since beginning operations in <strong>2014</strong>, we’ve received over <strong>1.5 million job quotes</strong> and have generated over <strong>£350 million</strong> worth of jobs for tradespeople in 2022.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-800 mb-8">
-              A list of job openings at MyJobQuote is shown below.
+              A list of job openings at MyTradeLinks is shown below.
             </p>
 
             {/* Openings categories */}

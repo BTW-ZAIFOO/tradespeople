@@ -20,7 +20,7 @@ const SecondSection = () => {
           margin: 0,
         }}
       >
-        Over 50,000 tradespeople nationwide use MyJobQuote
+        Over 50,000 tradespeople nationwide use MyTradeLinks
       </h2>
 
       {/* Button */}

@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-[#EAF4FF] to-[#F9FCFF] py-30">
+    <section className="relative bg-linear-to-b from-[#EAF4FF] to-[#F9FCFF] py-30">
       <div className="max-w-6xl mx-auto text-center px-4">
         {/* Heading */}
         <h1
@@ -20,7 +20,8 @@ const Hero = () => {
             letterSpacing: "-0.5px",
           }}
         >
-          Find Tradespeople,<br />
+          Find Tradespeople,
+          <br />
           compare up to 3 quotes!
         </h1>
 
@@ -35,7 +36,7 @@ const Hero = () => {
         </p>
 
         {/* Search Box */}
-        <div className="bg-white shadow-xl p-2 flex flex-col sm:flex-row gap-2 max-w-2xl mx-auto rounded-none">
+        <div className="bg-white shadow-2xl p-2 flex flex-col sm:flex-row gap-2 max-w-2xl mx-auto rounded-lg border-2 border-gray-300">
           {/* Input Field */}
           <div className="flex-1 flex items-center px-4 py-5 bg-white">
             <svg
@@ -58,10 +59,20 @@ const Hero = () => {
             />
           </div>
 
-          {/* Get Started Button */}
+          {/* Desktop Button */}
           <button
             onClick={handleGetStarted}
-            className="bg-[#009B7D] hover:bg-[#009B7D] text-white font-semibold px-5 py-1 border border-[#009B7D] text-lg whitespace-nowrap transition rounded-md"
+            className="hidden sm:inline-block bg-[#009B7D] hover:bg-[#009B7D] text-white font-semibold px-4 py-0.5 border border-[#009B7D] text-lg whitespace-nowrap transition rounded-md cursor-pointer"
+          >
+            Get Started
+          </button>
+        </div>
+
+        {/* Mobile Button */}
+        <div className="sm:hidden w-full flex justify-center mt-3">
+          <button
+            onClick={handleGetStarted}
+            className="bg-[#009B7D] hover:bg-[#009B7D] text-white font-semibold px-6 py-3.5 text-sm border border-[#009B7D] transition rounded-md cursor-pointer"
           >
             Get Started
           </button>
@@ -74,14 +85,13 @@ const Hero = () => {
           {/* Each star in its own green square */}
           <div className="flex items-center gap-1">
             {Array.from({ length: 5 }).map((_, i) => (
-             <div
-  key={i}
-  className="text-white text-sm w-5 h-5 flex items-center justify-center"
-  style={{ backgroundColor: "#009B7D" }}
->
-  ★
-</div>
-
+              <div
+                key={i}
+                className="text-white text-sm w-5 h-5 flex items-center justify-center"
+                style={{ backgroundColor: "#009B7D" }}
+              >
+                ★
+              </div>
             ))}
           </div>
 
@@ -94,8 +104,10 @@ const Hero = () => {
 
           {/* Trustpilot text with green star */}
           <span className="font-semibold text-gray-800 flex items-center gap-1">
-            <span className="text-base" style={{ color: "#009B7D" }}>★</span> Trustpilot
-
+            <span className="text-base" style={{ color: "#009B7D" }}>
+              ★
+            </span>{" "}
+            Trustpilot
           </span>
         </div>
       </div>

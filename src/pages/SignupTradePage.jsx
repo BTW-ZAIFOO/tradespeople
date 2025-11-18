@@ -83,7 +83,7 @@ const SignupTradePage = () => {
       {/* Header */}
       <header className="w-full py-6 flex justify-center items-center bg-white shadow gap-3">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="MyJobQuote Logo" className="h-25" />
+          <img src={logo} alt="MyTradeLinks Logo" className="h-25" />
           {/* <h1 className="text-3xl font-bold text-blue-600">
             my<span className="text-red-500">job</span>quote
           </h1> */}
@@ -91,35 +91,32 @@ const SignupTradePage = () => {
       </header>
 
       {/* Steps Section */}
-     <section className="w-full max-w-4xl mt-10 bg-white shadow rounded-lg flex justify-between text-center">
-  {[
-    "Find Jobs Near You",
-    "Select Your Trades",
-    "Primary Trade",
-    "Job Leads (Email)",
-    "Job Leads (SMS)",
-    "Create Account",
-  ].map((label, index) => (
-    <div
-      key={index}
-      className={`flex-1 py-4 text-sm font-semibold ${
-        step >= index + 1
-          ? "text-white"
-          : "text-gray-500 border-l border-gray-200"
-      } ${index === 0 ? "rounded-l-lg" : ""} ${
-        index === 5 ? "rounded-r-lg" : ""
-      }`}
-      style={{
-        backgroundColor: step >= index + 1 ? "#00A896" : "transparent",
-      }}
-    >
-      {label}
-    </div>
-  ))}
-</section>
+      <section className="w-full max-w-4xl mt-10 px-1.5 bg-white shadow rounded-lg flex flex-col md:flex-row text-center">
+        {[
+          "Find Jobs Near You",
+          "Select Your Trades",
+          "Primary Trade",
+          "Job Leads (Email)",
+          "Job Leads (SMS)",
+          "Create Account",
+        ].map((label, index) => (
+          <div
+            key={index}
+            className={`flex-1 px-0.5 py-4 text-sm font-semibold border-b md:border-b-0 md:border-l ${
+              step >= index + 1 ? "text-white" : "text-gray-500 border-gray-200"
+            } ${
+              index === 0 ? "rounded-t-lg md:rounded-l-lg md:border-l-0" : ""
+            } ${index === 5 ? "rounded-b-lg md:rounded-r-lg" : ""}`}
+            style={{
+              backgroundColor: step >= index + 1 ? "#00A896" : "transparent",
+            }}
+          >
+            {label}
+          </div>
+        ))}
+      </section>
 
-      
-            {/* Step 1: Postcode */}
+      {/* Step 1: Postcode */}
       {step === 1 && (
         <section className="w-full max-w-md mt-8 bg-white shadow rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-2">Looking for more work?</h2>
@@ -135,19 +132,18 @@ const SignupTradePage = () => {
           <div className="flex justify-between">
             <button
               onClick={() => navigate("/")}
-              className="flex items-center gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+              className="flex items-center gap-1 bg-gray-300 cursor-pointer text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
             >
               <ArrowLeft size={18} /> Back
             </button>
 
-           <button
-  onClick={() => setStep(2)}
-  style={{ backgroundColor: '#40D4E8' }}
-  className="text-white py-3 px-6 rounded-md font-semibold hover:brightness-90 transition"
->
-  Continue
-</button>
-
+            <button
+              onClick={() => setStep(2)}
+              style={{ backgroundColor: "#40D4E8" }}
+              className="text-white py-3 px-6 rounded-md font cursor-pointer-semibold hover:brightness-90 transition"
+            >
+              Continue
+            </button>
           </div>
         </section>
       )}
@@ -182,25 +178,25 @@ const SignupTradePage = () => {
           <div className="flex justify-between">
             <button
               onClick={() => setStep(1)}
-              className="flex items-center gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+              className="flex items-center gap-1 cursor-pointer bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
             >
               <ArrowLeft size={18} /> Back
             </button>
-          <button
-  disabled={selectedTrades.length === 0}
-  onClick={() => setStep(3)}
-  className={`px-4 py-2 rounded font-semibold transition ${
-    selectedTrades.length === 0
-      ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-      : "text-white hover:brightness-90"
-  }`}
-  style={{
-    backgroundColor: selectedTrades.length === 0 ? "#D1D5DB" : "#40D4E8" // gray for disabled, custom blue for active
-  }}
->
-  Continue
-</button>
-
+            <button
+              disabled={selectedTrades.length === 0}
+              onClick={() => setStep(3)}
+              className={`px-4 py-2 rounded cursor-pointer font-semibold transition ${
+                selectedTrades.length === 0
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "text-white hover:brightness-90"
+              }`}
+              style={{
+                backgroundColor:
+                  selectedTrades.length === 0 ? "#D1D5DB" : "#40D4E8", // gray for disabled, custom blue for active
+              }}
+            >
+              Continue
+            </button>
           </div>
         </section>
       )}
@@ -235,25 +231,24 @@ const SignupTradePage = () => {
           <div className="flex justify-between">
             <button
               onClick={() => setStep(2)}
-              className="flex items-center gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+              className="flex items-center gap-1 cursor-pointer bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
             >
               <ArrowLeft size={18} /> Back
             </button>
-           <button
-  disabled={!primaryTrade}
-  onClick={() => setStep(4)}
-  className={`px-4 py-2 rounded font-semibold transition ${
-    !primaryTrade
-      ? "text-gray-500 cursor-not-allowed"
-      : "text-white hover:brightness-90"
-  }`}
-  style={{
-    backgroundColor: !primaryTrade ? "#D1D5DB" : "#40D4E8" // gray for disabled, custom blue for active
-  }}
->
-  Continue
-</button>
-
+            <button
+              disabled={!primaryTrade}
+              onClick={() => setStep(4)}
+              className={`px-4 py-2 rounded  cursor-pointer font-semibold transition ${
+                !primaryTrade
+                  ? "text-gray-500 cursor-not-allowed"
+                  : "text-white hover:brightness-90"
+              }`}
+              style={{
+                backgroundColor: !primaryTrade ? "#D1D5DB" : "#40D4E8", // gray for disabled, custom blue for active
+              }}
+            >
+              Continue
+            </button>
           </div>
         </section>
       )}
@@ -274,25 +269,24 @@ const SignupTradePage = () => {
           <div className="flex justify-between">
             <button
               onClick={() => setStep(3)}
-              className="flex items-center gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+              className="flex items-center cursor-pointer gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
             >
               <ArrowLeft size={18} /> Back
             </button>
-           <button
-  disabled={!email}
-  onClick={() => setStep(5)}
-  className={`px-4 py-2 rounded font-semibold transition ${
-    !email
-      ? "text-gray-500 cursor-not-allowed"
-      : "text-white hover:brightness-90"
-  }`}
-  style={{
-    backgroundColor: !email ? "#D1D5DB" : "#40D4E8" // gray for disabled, custom blue for active
-  }}
->
-  Continue
-</button>
-
+            <button
+              disabled={!email}
+              onClick={() => setStep(5)}
+              className={`px-4 py-2 rounded cursor-pointer font-semibold transition ${
+                !email
+                  ? "text-gray-500 cursor-not-allowed"
+                  : "text-white hover:brightness-90"
+              }`}
+              style={{
+                backgroundColor: !email ? "#D1D5DB" : "#40D4E8", // gray for disabled, custom blue for active
+              }}
+            >
+              Continue
+            </button>
           </div>
         </section>
       )}
@@ -313,29 +307,27 @@ const SignupTradePage = () => {
           <div className="flex justify-between">
             <button
               onClick={() => setStep(4)}
-              className="flex items-center gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+              className="flex items-center cursor-pointer gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
             >
               <ArrowLeft size={18} /> Back
             </button>
-          <button
-  disabled={!phone}
-  onClick={() => setStep(6)}
-  className={`px-4 py-2 rounded font-semibold transition ${
-    !phone
-      ? "text-gray-500 cursor-not-allowed"
-      : "text-white hover:brightness-90"
-  }`}
-  style={{
-    backgroundColor: !phone ? "#D1D5DB" : "#40D4E8" // gray for disabled, custom blue for active
-  }}
->
-  Continue
-</button>
-
+            <button
+              disabled={!phone}
+              onClick={() => setStep(6)}
+              className={`px-4 py-2 rounded cursor-pointer font-semibold transition ${
+                !phone
+                  ? "text-gray-500 cursor-not-allowed"
+                  : "text-white hover:brightness-90"
+              }`}
+              style={{
+                backgroundColor: !phone ? "#D1D5DB" : "#40D4E8", // gray for disabled, custom blue for active
+              }}
+            >
+              Continue
+            </button>
           </div>
         </section>
       )}
-
 
       {/* Step 6: Create Account with Insurance & Verification */}
       {step === 6 && (
@@ -382,7 +374,9 @@ const SignupTradePage = () => {
           />
 
           {/* Insurance Info */}
-          <h3 className="font-semibold mb-2 text-gray-700">Insurance Details (optional)</h3>
+          <h3 className="font-semibold mb-2 text-gray-700">
+            Insurance Details (optional)
+          </h3>
           <input
             type="text"
             placeholder="Insurance Company"
@@ -397,7 +391,9 @@ const SignupTradePage = () => {
           >
             <option value="">Type of Cover</option>
             <option value="Public Liability">Public Liability</option>
-            <option value="Professional Indemnity">Professional Indemnity</option>
+            <option value="Professional Indemnity">
+              Professional Indemnity
+            </option>
             <option value="Employers Liability">Employers Liability</option>
           </select>
           <input
@@ -420,24 +416,32 @@ const SignupTradePage = () => {
             className="w-full mb-4"
           />
           {/* Tick if insured */}
-          {insuranceCompany && coverType && policyNumber && policyStartDate && policyDocument && (
-            <div className="text-green-600 font-semibold mb-4">✅ Insured</div>
-          )}
+          {insuranceCompany &&
+            coverType &&
+            policyNumber &&
+            policyStartDate &&
+            policyDocument && (
+              <div className="text-green-600 font-semibold mb-4">
+                ✅ Insured
+              </div>
+            )}
 
           {/* Verification Documents */}
-        <h3 className="font-semibold mb-2 text-gray-700">Verification Documents (optional)</h3>
-<input
-  type="file"
-  accept=".pdf,.jpg,.png"
-  onChange={(e) => setIdDocument(e.target.files[0])}
-  className="w-full mb-4"
-/>
+          <h3 className="font-semibold mb-2 text-gray-700">
+            Verification Documents (optional)
+          </h3>
+          <input
+            type="file"
+            accept=".pdf,.jpg,.png"
+            onChange={(e) => setIdDocument(e.target.files[0])}
+            className="w-full mb-4"
+          />
 
-{idDocument && (
-  <div className="text-green-600 font-semibold mb-4">
-    ✅ Verification Document Uploaded: {idDocument.name}
-  </div>
-)}
+          {idDocument && (
+            <div className="text-green-600 font-semibold mb-4">
+              ✅ Verification Document Uploaded: {idDocument.name}
+            </div>
+          )}
 
           {/* Account Info */}
           <input
@@ -455,33 +459,33 @@ const SignupTradePage = () => {
               onChange={(e) => setAcceptedTerms(e.target.checked)}
               className="mr-2"
             />
-            I accept MyJobQuote's Terms & Conditions and Terms of Supply
+            I accept MyTradeLinks's Terms & Conditions and Terms of Supply
           </label>
 
           <div className="flex justify-between">
             <button
               onClick={() => setStep(5)}
-              className="flex items-center gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
+              className="flex items-center cursor-pointer gap-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition"
             >
               <ArrowLeft size={18} /> Back
             </button>
-           <button
-  disabled={!firstName || !lastName || !password || !acceptedTerms}
-  onClick={handleCreateAccount}
-  className={`px-4 py-2 rounded font-semibold transition ${
-    !firstName || !lastName || !password || !acceptedTerms
-      ? "text-gray-500 cursor-not-allowed"
-      : "text-white hover:brightness-90"
-  }`}
-  style={{
-    backgroundColor: !firstName || !lastName || !password || !acceptedTerms 
-      ? "#D1D5DB" // disabled gray
-      : "#40D4E8" // active custom blue
-  }}
->
-  Create Account
-</button>
-
+            <button
+              disabled={!firstName || !lastName || !password || !acceptedTerms}
+              onClick={handleCreateAccount}
+              className={`px-4 py-2 rounded cursor-pointer font-semibold transition ${
+                !firstName || !lastName || !password || !acceptedTerms
+                  ? "text-gray-500 cursor-not-allowed"
+                  : "text-white hover:brightness-90"
+              }`}
+              style={{
+                backgroundColor:
+                  !firstName || !lastName || !password || !acceptedTerms
+                    ? "#D1D5DB" // disabled gray
+                    : "#40D4E8", // active custom blue
+              }}
+            >
+              Create Account
+            </button>
           </div>
 
           {/* ✅ Success Modal */}

@@ -9,7 +9,7 @@ const ContactUs = () => {
   const topQuestions = [
     "Hiring Checklist",
     "Tradespeople",
-    "Getting Started with MyJobQuote",
+    "Getting Started with MyTradeLinks",
     "Settings",
     "How our service works",
     "My Account",
@@ -24,7 +24,6 @@ const ContactUs = () => {
       <section className="bg-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 shadow-md space-y-8">
-            
             {/* Page title */}
             <h1 className="text-3xl sm:text-4xl font-bold text-[rgb(80,85,102)]">
               Contact MyTradesLink
@@ -32,7 +31,8 @@ const ContactUs = () => {
 
             {/* Intro paragraph */}
             <p className="text-lg leading-relaxed text-gray-800">
-              Search our help section or get in touch by answering the questions below.
+              Search our help section or get in touch by answering the questions
+              below.
             </p>
 
             {/* Search bar with blue button */}
@@ -42,9 +42,7 @@ const ContactUs = () => {
                 placeholder="What do you need help with?"
                 className="flex-1 border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#40D4E8]"
               />
-              <button
-                className="px-6 py-2 bg-[#40D4E8] text-white font-semibold rounded-lg hover:opacity-90 transition"
-              >
+              <button className="px-6 py-2 bg-[#40D4E8] text-white font-semibold rounded-lg hover:opacity-90 transition cursor-pointer">
                 Search
               </button>
             </div>
@@ -76,7 +74,7 @@ const ContactUs = () => {
 
                 <button
                   onClick={() => setShowAccountChoices(true)}
-                  className="w-full text-left flex items-center justify-between p-4 hover:bg-gray-50 transition"
+                  className="w-full text-left flex items-center justify-between p-4 hover:bg-gray-50 transition cursor-pointer"
                 >
                   <div className="flex items-start space-x-3">
                     <span className="text-[#40D4E8] text-xl mt-1">📝</span>
@@ -92,7 +90,7 @@ const ContactUs = () => {
 
               {showAccountChoices && (
                 <div className="bg-white border border-gray-300 rounded-lg divide-y divide-gray-300 mt-4">
-                  <button className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition">
+                  <button className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition cursor-pointer">
                     <div className="flex items-start space-x-3">
                       <span className="text-[#40D4E8] text-xl mt-1">🔧</span>
                       <div>
@@ -104,7 +102,7 @@ const ContactUs = () => {
                     <span className="text-gray-400 text-lg">{">"}</span>
                   </button>
 
-                  <button className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition">
+                  <button className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition cursor-pointer">
                     <div className="flex items-start space-x-3">
                       <span className="text-[#40D4E8] text-xl mt-1">🏠</span>
                       <div>
@@ -116,7 +114,7 @@ const ContactUs = () => {
                     <span className="text-gray-400 text-lg">{">"}</span>
                   </button>
 
-                  <button className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition">
+                  <button className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition cursor-pointer">
                     <div className="flex items-start space-x-3">
                       <span className="text-[#40D4E8] text-xl mt-1">❓</span>
                       <div>
@@ -129,7 +127,6 @@ const ContactUs = () => {
                   </button>
                 </div>
               )}
-
             </div>
 
             {/* Top Questions */}
@@ -151,13 +148,10 @@ const ContactUs = () => {
 
             {/* Submit button */}
             <div className="text-center mt-6">
-              <button
-                className="px-8 py-3 bg-[#40D4E8] text-white font-semibold rounded-lg hover:opacity-90 transition"
-              >
+              <button className="px-8 py-3 bg-[#40D4E8] text-white font-semibold rounded-lg hover:opacity-90 transition cursor-pointer">
                 Submit
               </button>
             </div>
-
           </div>
         </div>
       </section>

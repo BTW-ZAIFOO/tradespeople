@@ -12,7 +12,8 @@ const HowItWorks = () => {
     },
     {
       title: "Receive up to 3 quotes",
-      description: "Up to 3 local trades will then be in touch to quote for the work.",
+      description:
+        "Up to 3 local trades will then be in touch to quote for the work.",
       image: quotes,
     },
     {
@@ -40,8 +41,7 @@ const HowItWorks = () => {
         style={{ color: "rgb(80, 85, 102)" }}
       >
         Find a tradesman in your area with our quick and easy online <br />
-         connection service.It's free and only takes a minute! 
-       
+        connection service.It's free and only takes a minute!
       </p>
 
       {/* Steps */}
