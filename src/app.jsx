@@ -28,7 +28,7 @@ import DisputePage from "./pages/DisputePage";
 import ContactSupportPage from "./pages/ContactSupportPage";
 import TicketsPage from "./pages/TicketsPage";
 import SignupTradePage from "./pages/SignupTradePage";
-import PostJobPage from "./pages/PostJobPage";
+import PostJobPage from "./pages/postjobpage";
 import UpgradeTradesperson from "./pages/UpgradeTradesperson";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
