@@ -42,7 +42,6 @@ function App() {
     <Router>
       {/* ✅ ScrollToTop component ko yahan daalna hai */}
       <ScrollToTop />
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signup-trade" element={<SignupTradePage />} />
