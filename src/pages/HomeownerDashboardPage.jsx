@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import EditJobModal from "../components/dashboard/EditJobModal.jsx";
 
 const HomeownerDashboardPage = () => {
   const navigate = useNavigate();
   const [userName, setUserName] = useState("User");
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+
+  const [showEditModal, setShowEditModal] = useState(false);
 
   // ✅ Get user name from localStorage
   useEffect(() => {
@@ -44,12 +47,20 @@ const HomeownerDashboardPage = () => {
           </div>
           <div className="flex items-center gap-4">
             <p className="text-gray-500 text-sm">0 trades matched</p>
-            <button className="text-[#40D4E8] font-medium hover:underline cursor-pointer">
+            <button
+              onClick={() => setShowEditModal(true)}
+              className="text-[#40D4E8] font-medium hover:underline cursor-pointer"
+            >
               edit
             </button>
           </div>
         </div>
       </div>
+
+      <EditJobModal
+        open={showEditModal}
+        onClose={() => setShowEditModal(false)}
+      />
 
       {/* Post Another Job */}
       <div className="text-center mt-8">
