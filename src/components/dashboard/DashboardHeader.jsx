@@ -26,7 +26,7 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
 
       {/* ===================== RIGHT NOTIFICATION SIDEBAR ===================== */}
       <div
-        className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-xl z-50 transition-transform duration-300 transform md:hidden overflow-y-auto ${
+        className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-xl z-50 transition-transform duration-300 transform md:block overflow-y-auto ${
           notifOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -92,43 +92,6 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
           {/* Top Row - Logo and Hamburger */}
           <div className="flex items-center justify-between px-4 lg:px-24 py-3 border-gray-100">
             <div className="flex items-center space-x-2 lg:space-x-6">
-              {/* Hamburger Menu - Mobile Only */}
-              <button
-                onClick={toggleSidebar}
-                className="lg:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition cursor-pointer"
-                aria-label="Toggle sidebar"
-              >
-                {sidebarOpen ? (
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </button>
-
               {/* Mobile Logo */}
               <Link to="/" className="lg:hidden flex items-center gap-2">
                 <img src={logoImage} alt="Logo" className="h-12 w-auto" />
