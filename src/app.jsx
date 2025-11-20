@@ -37,6 +37,9 @@ import LoginLinkPage from "./pages/LoginLinkPage";
 import Careers from "./pages/Careers";
 import GettingStartedPage from "./pages/GettingStartedPage";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   return (
     <Router>
@@ -85,6 +88,8 @@ function App() {
           <Route path="faq" element={<FAQPage />} />
         </Route>
       </Routes>
+
+      <ToastContainer position="top-center" />
     </Router>
   );
 }

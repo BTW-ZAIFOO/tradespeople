@@ -174,183 +174,220 @@ const PostJobPage = () => {
             placeholder="Example: Lay external tiles on patio, about 20 square metres, provide slip resistant tiles."
           ></textarea>
           <div className="flex justify-between">
-            <button
-              onClick={nextStep}
-              className="bg-[#0076CE] text-white px-6 py-2 rounded-md hover:bg-[#005fa3] cursor-pointer"
-            >
-              Continue
-            </button>
             {step > 1 && (
               <button
                 onClick={prevStep}
-                className="bg-[#0076CE] text-white px-6 py-2 rounded-md hover:bg-[#005fa3] cursor-pointer"
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontWeight: "600"
+                }}
+                className="bg-[#40D4E8] text-white px-6 py-2 rounded-md cursor-pointer"
               >
                 Back
               </button>
             )}
-          </div>
-        </section>
-      )}
-
-      {/* Step 3 */}
-      {step === 3 && (
-        <section className="w-full max-w-2xl mt-2 bg-white shadow-sm rounded-lg p-8 text-center">
-          <h3 className="text-xl font-semibold mb-2">Add photos (OPTIONAL)</h3>
-          <input
-            type="file"
-            multiple
-            className="mb-4 border-2 p-6 rounded-md border-gray-300"
-          />
-          <div className="flex justify-center gap-4">
             <button
               onClick={nextStep}
-              className="bg-[#0076CE] text-white px-6 py-2 rounded-md cursor-pointer"
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: "600"
+              }}
+              className="bg-[#40D4E8] text-white px-6 py-2 rounded-md cursor-pointer"
             >
               Continue
             </button>
-            <button
-              onClick={nextStep}
-              className="text-[#0076CE] underline ml-3 cursor-pointer"
-            >
-              Skip
-            </button>
           </div>
         </section>
-      )}
+      )
+      }
+
+      {/* Step 3 */}
+      {
+        step === 3 && (
+          <section className="w-full max-w-2xl mt-2 bg-white shadow-sm rounded-lg p-8 text-center">
+            <h3 className="text-xl font-semibold mb-2">Add photos (OPTIONAL)</h3>
+            <input
+              type="file"
+              multiple
+              className="mb-4 border-2 p-6 rounded-md border-gray-300"
+            />
+            <div className="flex justify-center gap-4">
+              <button
+                onClick={nextStep}
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontWeight: "600"
+                }}
+                className="bg-[#40D4E8] text-white px-6 py-2 rounded-md cursor-pointer"
+              >
+                Continue
+              </button>
+              <button
+                onClick={nextStep}
+                className="text-[#0076CE] underline ml-3 cursor-pointer"
+              >
+                Skip
+              </button>
+            </div>
+          </section>
+        )
+      }
 
       {/* Continue remaining steps like Step 4, 5, 6, 7, 8 with same Back button logic */}
       {/* ...same as your existing code... */}
       {/* Step 4: Location */}
-      {step === 4 && (
-        <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
-          <h3 className="text-xl font-semibold mb-3">Job Location</h3>
-          <input
-            type="text"
-            placeholder="Enter postcode (e.g., CH3 5AX)"
-            className="w-full border rounded-md p-3 mb-4 focus:ring-2 focus:ring-[#0076CE]"
-          />
-          <button
-            onClick={nextStep}
-            className="bg-[#0076CE] text-white px-6 py-2 rounded-md cursor-pointer"
-          >
-            Continue
-          </button>
-        </section>
-      )}
+      {
+        step === 4 && (
+          <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
+            <h3 className="text-xl font-semibold mb-3">Job Location</h3>
+            <input
+              type="text"
+              placeholder="Enter postcode (e.g., CH3 5AX)"
+              className="w-full border rounded-md p-3 mb-4 focus:ring-2 focus:ring-[#0076CE]"
+            />
+            <button
+              onClick={nextStep}
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: "600"
+              }}
+              className="bg-[#40D4E8] text-white px-6 py-2 rounded-md cursor-pointer"
+            >
+              Continue
+            </button>
+          </section>
+        )
+      }
 
       {/* Step 5: Budget */}
-      {step === 5 && (
-        <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
-          <h3 className="text-xl font-semibold mb-3">
-            What's your estimated budget?
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
-            {[
-              "Under £100",
-              "Under £250",
-              "Under £500",
-              "Under £1,000",
-              "Under £2,000",
-              "Under £4,000",
-              "Under £8,000",
-              "Under £15,000",
-              "Over £30,000",
-              "Not Sure",
-            ].map((b, i) => (
-              <button
-                key={i}
-                onClick={nextStep}
-                className="border rounded-md py-2 hover:bg-[#e9f2ff] cursor-pointer"
-              >
-                {b}
-              </button>
-            ))}
-          </div>
-        </section>
-      )}
+      {
+        step === 5 && (
+          <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
+            <h3 className="text-xl font-semibold mb-3">
+              What's your estimated budget?
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
+              {[
+                "Upto £100",
+                "Upto £250",
+                "Upto £500",
+                "Upto £1,000",
+                "Upto £2,000",
+                "Upto £4,000",
+                "Upto £8,000",
+                "Upto £15,000",
+                "Upto £30,000",
+                "Not Sure",
+              ].map((b, i) => (
+                <button
+                  key={i}
+                  onClick={nextStep}
+                  className="border rounded-md py-2 hover:bg-[#e9f2ff] cursor-pointer"
+                >
+                  {b}
+                </button>
+              ))}
+            </div>
+          </section>
+        )
+      }
 
       {/* Step 6: Start Date */}
-      {step === 6 && (
-        <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
-          <h3 className="text-xl font-semibold mb-3">
-            When would you like the work to start?
-          </h3>
-          <div className="flex flex-col gap-3">
-            {[
-              "ASAP",
-              "Within 2 days",
-              "Within 2 weeks",
-              "Within 2 months",
-              "Flexible",
-            ].map((t, i) => (
-              <button
-                key={i}
-                onClick={nextStep}
-                className="border rounded-md py-2 hover:bg-[#e9f2ff] cursor-pointer"
-              >
-                {t}
-              </button>
-            ))}
-          </div>
-        </section>
-      )}
+      {
+        step === 6 && (
+          <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
+            <h3 className="text-xl font-semibold mb-3">
+              When would you like the work to start?
+            </h3>
+            <div className="flex flex-col gap-3">
+              {[
+                "ASAP",
+                "Within 2 days",
+                "Within 2 weeks",
+                "Within 2 months",
+                "Flexible",
+              ].map((t, i) => (
+                <button
+                  key={i}
+                  onClick={nextStep}
+                  className="border rounded-md py-2 hover:bg-[#e9f2ff] cursor-pointer"
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          </section>
+        )
+      }
 
       {/* Step 7: Email */}
-      {step === 7 && (
-        <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
-          <h3 className="text-xl font-semibold mb-3">Email Address</h3>
-          <input
-            type="email"
-            placeholder="john.doe@example.com"
-            className="w-full border rounded-md p-3 mb-4 focus:ring-2 focus:ring-[#0076CE]"
-          />
-          <button
-            onClick={nextStep}
-            className="bg-[#0076CE] text-white px-6 py-2 rounded-md cursor-pointer"
-          >
-            Continue
-          </button>
-        </section>
-      )}
+      {
+        step === 7 && (
+          <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
+            <h3 className="text-xl font-semibold mb-3">Email Address</h3>
+            <input
+              type="email"
+              placeholder="john.doe@example.com"
+              className="w-full border rounded-md p-3 mb-4 focus:ring-2 focus:ring-[#0076CE]"
+            />
+            <button
+              onClick={nextStep}
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: "600"
+              }}
+              className="bg-[#40D4E8] text-white px-6 py-2 rounded-md cursor-pointer"
+            >
+              Continue
+            </button>
+          </section>
+        )
+      }
 
       {/* Step 8: Account Details */}
-      {step === 8 && (
-        <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
-          <h3 className="text-xl font-semibold mb-3">Your Account</h3>
-          <div className="space-y-3">
-            <input
-              type="text"
-              placeholder="First name"
-              className="w-full border rounded-md p-3"
-            />
-            <input
-              type="text"
-              placeholder="Last name"
-              className="w-full border rounded-md p-3"
-            />
-            <input
-              type="text"
-              placeholder="Phone number"
-              className="w-full border rounded-md p-3"
-            />
-            <input
-              type="password"
-              placeholder="Create a password"
-              className="w-full border rounded-md p-3"
-            />
-            <label className="flex items-center gap-2 text-sm">
-              <input type="checkbox" /> I accept MyTradeLinks's Terms of Use &
-              Privacy Policy
-            </label>
-            <button
-              onClick={() => navigate("/dashboard/homeowner")}
-              className="bg-[#0076CE] text-white px-6 py-2 rounded-md mt-3 hover:bg-[#005fa3] cursor-pointer"
-            >
-              Get Quotes
-            </button>
-          </div>
-        </section>
-      )}
+      {
+        step === 8 && (
+          <section className="w-full max-w-2xl mt-8 bg-white shadow-sm rounded-lg p-8 text-left">
+            <h3 className="text-xl font-semibold mb-3">Your Account</h3>
+            <div className="space-y-3">
+              <input
+                type="text"
+                placeholder="First name"
+                className="w-full border rounded-md p-3"
+              />
+              <input
+                type="text"
+                placeholder="Last name"
+                className="w-full border rounded-md p-3"
+              />
+              <input
+                type="text"
+                placeholder="Phone number"
+                className="w-full border rounded-md p-3"
+              />
+              <input
+                type="password"
+                placeholder="Create a password"
+                className="w-full border rounded-md p-3"
+              />
+              <label className="flex items-center gap-2 text-sm">
+                <input type="checkbox" /> I accept MyTradeLinks's Terms of Use &
+                Privacy Policy
+              </label>
+              <button
+                onClick={() => navigate("/dashboard/homeowner")}
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontWeight: "600"
+                }}
+                className="bg-[#40D4E8] text-white px-6 py-2 rounded-md mt-3 cursor-pointer"
+              >
+                Get Quotes
+              </button>
+            </div>
+          </section>
+        )
+      }
       {/* Footer */}
       <footer className="w-full mt-10 py-6 text-center text-sm text-[#505566]">
         © 2025 mytradelinks.co.uk |{" "}
@@ -358,7 +395,7 @@ const PostJobPage = () => {
         <span className="underline cursor-pointer">Privacy</span> |{" "}
         <span className="underline cursor-pointer">Terms & Conditions</span>
       </footer>
-    </div>
+    </div >
   );
 };
 

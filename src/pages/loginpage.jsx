@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import Header from "../components/Header"; // adjust path if needed
 import Footer from "../components/Footer"; // adjust path if needed
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/dashboard");   // Navigate to Dashboard
+    toast.success("Login successful");
+  };
 
   return (
     <>
@@ -66,7 +75,9 @@ const LoginPage = () => {
 
           {/* Buttons */}
           <div className="flex items-center mb-6">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-md cursor-pointer">
+            <button
+              onClick={handleLogin}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-md cursor-pointer">
               Login
             </button>
             <span className="mx-3 text-gray-600 text-sm">or</span>
