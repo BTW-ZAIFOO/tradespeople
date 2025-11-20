@@ -60,20 +60,30 @@ const FindLocationPage = () => {
 
               {/* Search Box */}
               <div className="relative mb-8">
+                {/* Input */}
                 <input
                   type="text"
                   placeholder="Enter your postcode"
                   value={selectedPostcode}
                   onChange={(e) => setSelectedPostcode(e.target.value)}
-                  className="w-full px-6 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#40D4E8] pr-32"
+                  className="w-full px-6 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#40D4E8]pr-32 md:pr-32 "
                 />
-                <button className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-[#40D4E8] text-white font-semibold rounded-md hover:bg-[#00A896] transition cursor-pointer">
+
+                {/* Desktop Button (inside input) */}
+                <button className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-[#40D4E8] /text-white font-semibold rounded-md hover:bg-[#00A896] transition cursor-pointer">
+                  Get Started
+                </button>
+
+                {/* Mobile Button (below input) */}
+                <button className="md:hidden mt-3 py-3 px-8 bg-[#40D4E8] text-white font-semibold rounded-md hover:bg-[#00A896] transition cursor-pointer">
                   Get Started
                 </button>
               </div>
 
               {/* Trust badges */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-start gap-3 md:flex-row md:items-center flex-col">
+
+                {/* Stars */}
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <div
@@ -85,7 +95,9 @@ const FindLocationPage = () => {
                     </div>
                   ))}
                 </div>
-                <div className="ml-2">
+
+                {/* Reviews text */}
+                <div className="ml-2 md:ml-2 mt-2 md:mt-0">
                   <p className="font-bold text-[#505566] flex items-center gap-1">
                     {locationData.stats.reviews} reviews from
                     <span className="text-[#009B7D] text-xl">★</span>

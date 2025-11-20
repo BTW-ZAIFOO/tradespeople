@@ -36,8 +36,8 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center mb-6">
           <div className="w-1.5 h-6 bg-blue-600 mr-3 rounded-sm"></div>
           <h2 className="text-lg font-bold text-[#1e4db7] tracking-wide">
@@ -117,8 +117,10 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
 
                     {/* Company Info */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between gap-4 mb-2">
-                        <div>
+                      {/* Top Section: Name + Rating + Button */}
+                      <div className="flex items-start justify-between gap-4 mb-2 md:flex-row md:items-start md:justify-between flex-col">
+                        {/* Name + Rating */}
+                        <div className="w-full">
                           <h3 className="text-lg font-bold text-gray-800">
                             {tradesperson.name}
                           </h3>
@@ -136,7 +138,7 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
                         </div>
 
                         {/* PROFILE Button */}
-                        <button className="px-4 py-2 border-2 border-[#40D4E8] bg-[#40D4E8] text-white rounded font-bold text-xs whitespace-nowrap hover:bg-[#00A896] transition cursor-pointer">
+                        <button className="px-4 py-2 border-2 border-[#40D4E8] bg-[#40D4E8] text-white rounded font-bold text-xs whitespace-nowrap hover:bg-[#00A896] transition cursor-pointer md:self-start w-full mt-2 md:w-auto">
                           PROFILE
                         </button>
                       </div>
@@ -240,9 +242,10 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
           </button>
         </div>
       </div>
+
       {/* ================= RECENT QUESTIONS SECTION ================= */}
-      <section className="bg-[#f4f8ff] py-16 mt-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="bg-[#f4f8ff] py-16 mt-16">
+        <div className="max-w-6xl mx-auto px-4">
           {/* Heading */}
           <div className="flex items-center mb-8">
             <div className="w-1.5 h-6 bg-blue-600 mr-3 rounded-sm"></div>
@@ -329,7 +332,7 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
       {/* === FIND TRADESMAN CTA SECTION === */}
       <FindTradesmanCTA />
     </div>
