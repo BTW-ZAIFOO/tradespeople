@@ -164,11 +164,9 @@ const QuestionsPage = () => {
     >
       <Header />
 
-      {/* Hero Section */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
-            {/* Left Content */}
             <div className="lg:col-span-2">
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-700 mb-6">
                 Ask a Trade
@@ -177,16 +175,12 @@ const QuestionsPage = () => {
                 Got a question that only a tradesperson can answer? We have
                 thousands of trades ready to answer any question you may have.
               </p>
-
-              {/* Ask Question Button */}
               <button
                 className="text-white px-8 py-3 rounded-md text-lg font-semibold hover:brightness-90 transition mb-12 cursor-pointer"
                 style={{ backgroundColor: "#40D4E8" }}
               >
                 Ask your question
               </button>
-
-              {/* Search Section */}
 
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-700 mb-4">
@@ -231,12 +225,10 @@ const QuestionsPage = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="bg-white py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-4 gap-8">
             <div className="lg:col-span-3">
-              {/* Filters and Sort */}
               <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6 shadow-sm">
                 <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
                   <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
@@ -275,7 +267,6 @@ const QuestionsPage = () => {
                 </div>
               </div>
 
-              {/* Questions List */}
               <div className="space-y-4">
                 {sortedQuestions.map((question) => (
                   <div
@@ -342,7 +333,6 @@ const QuestionsPage = () => {
                 ))}
               </div>
 
-              {/* Pagination */}
               <div className="flex justify-center mt-8">
                 <div className="flex items-center gap-1">
                   <button
@@ -385,7 +375,6 @@ const QuestionsPage = () => {
               </div>
             </div>
 
-            {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6 mb-6">
                 <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-6">
@@ -410,7 +399,6 @@ const QuestionsPage = () => {
                 </div>
               </div>
 
-              {/* CTA Section */}
               <div className="bg-[#f6faff] rounded-xl text-center p-6 shadow-sm mb-6">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">
                   Find Tradespeople,
@@ -439,7 +427,6 @@ const QuestionsPage = () => {
             </div>
           </div>
 
-          {/* Extra CTA Section */}
           <div className="rounded-xl p-6 shadow-sm mb-8 w-full max-w-lg">
             <h3 className="text-xl font-bold text-gray-800 mb-2 leading-snug">
               Find Tradespeople,
@@ -474,7 +461,6 @@ const QuestionsPage = () => {
           </div>
         </div>
 
-        {/* Ready to Get a Price Section */}
         <div className="bg-[#f6faff] rounded-xl p-8 shadow-md mb-8 max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Ready to get a price for your home improvement project?

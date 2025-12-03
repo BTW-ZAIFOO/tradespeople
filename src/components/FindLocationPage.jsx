@@ -39,13 +39,11 @@ const FindLocationPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      
       <Header />
-
-      {/* HERO SECTION */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Text Content */}
             <div>
               <h1
                 className="font-extrabold mb-4 leading-tight text-4xl"
@@ -58,9 +56,7 @@ const FindLocationPage = () => {
                 {locationData.heroDescription}
               </p>
 
-              {/* Search Box */}
               <div className="relative mb-8">
-                {/* Input */}
                 <input
                   type="text"
                   placeholder="Enter your postcode"
@@ -69,21 +65,16 @@ const FindLocationPage = () => {
                   className="w-full px-6 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#40D4E8]pr-32 md:pr-32 "
                 />
 
-                {/* Desktop Button (inside input) */}
                 <button className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-[#40D4E8] /text-white font-semibold rounded-md hover:bg-[#00A896] transition cursor-pointer">
                   Get Started
                 </button>
 
-                {/* Mobile Button (below input) */}
                 <button className="md:hidden mt-3 py-3 px-8 bg-[#40D4E8] text-white font-semibold rounded-md hover:bg-[#00A896] transition cursor-pointer">
                   Get Started
                 </button>
               </div>
 
-              {/* Trust badges */}
               <div className="flex items-start gap-3 md:flex-row md:items-center flex-col">
-
-                {/* Stars */}
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <div
@@ -96,7 +87,6 @@ const FindLocationPage = () => {
                   ))}
                 </div>
 
-                {/* Reviews text */}
                 <div className="ml-2 md:ml-2 mt-2 md:mt-0">
                   <p className="font-bold text-[#505566] flex items-center gap-1">
                     {locationData.stats.reviews} reviews from
@@ -107,7 +97,6 @@ const FindLocationPage = () => {
               </div>
             </div>
 
-            {/* Right: Image */}
             <div className="hidden lg:block">
               <img
                 src={locationData.banner}
@@ -120,13 +109,10 @@ const FindLocationPage = () => {
       </section>
 
       <Featured />
-
-      {/* TRADESPEOPLE SECTION */}
       <Tradespeople
         locationName={locationData.name}
         tradespeople={locationData.tradespeople || []}
       />
-
       <Footer />
     </div>
   );

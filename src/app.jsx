@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-
 import HomePage from "./pages/HomePage";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import QuestionsPage from "./pages/QuestionsPage";
@@ -36,14 +35,12 @@ import LoginPage from "./pages/loginpage";
 import LoginLinkPage from "./pages/LoginLinkPage";
 import Careers from "./pages/Careers";
 import GettingStartedPage from "./pages/GettingStartedPage";
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <Router>
-      {/* ✅ ScrollToTop component ko yahan daalna hai */}
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -61,14 +58,10 @@ function App() {
         <Route path="/cost-guides" element={<CostGuidesPage />} />
         <Route path="/category/:slug" element={<CategoryPage />} />
         <Route path="/find/:location" element={<FindLocationPage />} />
-
-        {/* Homeowner Dashboard Routes */}
         <Route path="/dashboard/homeowner" element={<HomeownerLayout />}>
           <Route index element={<HomeownerDashboardPage />} />
         </Route>
         <Route path="/about-us" element={<AboutUs />} />
-
-        {/* Trades Dashboard Routes */}
         <Route path="/dashboard" element={<TradesLayout />}>
           <Route index element={<DashboardPage />} />
           <Route path="jobs" element={<JobsPage />} />

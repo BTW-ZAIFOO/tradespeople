@@ -31,19 +31,15 @@ const DisputePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     alert("Dispute submitted. Our team will review it shortly.");
     navigate("/dashboard/support");
   };
 
   return (
     <div className="bg-gray-50 min-h-full">
-
-       {/* Quick Access Cards */}
-        <QuickAccessCards />
+      <QuickAccessCards />
       <div className="max-w-6xl mx-auto p-8">
         <div className="bg-white rounded-lg shadow-sm p-8">
-          {/* Header */}
           <div className="mb-8">
             <button
               onClick={() => navigate("/dashboard/support")}
@@ -59,7 +55,6 @@ const DisputePage = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Job Information */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Job Information
@@ -97,7 +92,6 @@ const DisputePage = () => {
               </div>
             </div>
 
-            {/* Issue Details */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Issue Details
@@ -141,7 +135,6 @@ const DisputePage = () => {
               </div>
             </div>
 
-            {/* Evidence */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Evidence
@@ -186,7 +179,6 @@ const DisputePage = () => {
               </div>
             </div>
 
-            {/* Submit */}
             <div className="flex gap-4">
               <button
                 type="submit"
@@ -204,7 +196,6 @@ const DisputePage = () => {
             </div>
           </form>
 
-          {/* Information Box */}
           <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
             <h3 className="font-semibold text-blue-900 mb-2">
               What Happens Next?

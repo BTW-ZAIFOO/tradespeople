@@ -26,7 +26,6 @@ const Preferences = () => {
         Control how you receive notifications and manage your profile visibility.
       </p>
 
-      {/* Notifications Section */}
       <div className="bg-gray-50 p-6 rounded-lg mb-6">
         <h3 className="font-semibold text-gray-700 mb-4">Notification Settings</h3>
         <div className="space-y-4">
@@ -97,7 +96,6 @@ const Preferences = () => {
         </div>
       </div>
 
-      {/* Privacy Section */}
       <div className="bg-gray-50 p-6 rounded-lg mb-6">
         <h3 className="font-semibold text-gray-700 mb-4">Privacy Settings</h3>
         <div className="space-y-4">

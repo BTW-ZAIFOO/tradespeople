@@ -181,9 +181,7 @@ const JobsList = () => {
 
   return (
     <div className="flex flex-col lg:flex-row h-full max-w-6xl mx-auto px-9 py-8 gap-4">
-      {/* Jobs List Panel */}
       <div className="w-full lg:w-2/5 flex flex-col ">
-        {/* Tabs */}
         <div className="grid grid-cols-3 gap-4">
           <button
             onClick={() => setActiveTab("new")}
@@ -257,7 +255,6 @@ const JobsList = () => {
           </button>
         </div>
 
-        {/* Job List Header */}
         <div className="p-3 md:p-4 bg-white mt-3 border-b border-gray-300">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-base md:text-lg font-semibold">NEW JOBS</h2>
@@ -297,17 +294,16 @@ const JobsList = () => {
             </button>
             {isFilterOpen && (
               <>
-                {/* Background overlay */}
                 <div
                   onClick={() => setIsFilterOpen(false)}
-                  className={` fixed inset-0 bg-black backdrop-blur-md z-40 transition-opacity duration-300 overflow-y-auto
-${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
-  `}
+                  className={` fixed inset-0 bg-black backdrop-blur-md z-40 transition-opacity duration-300 overflow-y-auto ${
+                    isFilterOpen
+                      ? "opacity-30"
+                      : "opacity-0 pointer-events-none"
+                  }`}
                 />
 
-                {/* Sliding Sidebar */}
                 <div className="fixed top-0 left-0 h-full w-72 sm:w-80 bg-white shadow-xl z-50 transform transition-transform duration-300">
-                  {/* Header */}
                   <div className="flex items-center justify-between px-6 py-3">
                     <h2 className="text-lg font-semibold">Filter</h2>
                     <button
@@ -318,9 +314,7 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                     </button>
                   </div>
 
-                  {/* Sidebar Body */}
                   <div className="p-4 overflow-y-auto h-full">
-                    {/* DROPDOWN ITEM */}
                     <div className="border-b border-gray-300 pb-3">
                       <button
                         onClick={() => toggleDropdown("category")}
@@ -336,7 +330,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                         </span>
                       </button>
 
-                      {/* Options */}
                       {openDropdown === "category" && (
                         <div className="mt-2 pl-2 space-y-2 animate-fadeIn">
                           <label className="flex items-center">
@@ -355,7 +348,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                       )}
                     </div>
 
-                    {/* DROPDOWN ITEM */}
                     <div className="border-b border-gray-300 pb-3">
                       <button
                         onClick={() => toggleDropdown("date")}
@@ -401,7 +393,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                       )}
                     </div>
 
-                    {/* DROPDOWN ITEM */}
                     <div className="border-b border-gray-300 pb-3">
                       <button
                         onClick={() => toggleDropdown("price")}
@@ -433,7 +424,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                       )}
                     </div>
 
-                    {/* DROPDOWN ITEM */}
                     <div className="border-b border-gray-300 pb-3">
                       <button
                         onClick={() => toggleDropdown("tags")}
@@ -479,7 +469,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
           </div>
         </div>
 
-        {/* Job Items */}
         <div className="flex-1 overflow-y-auto bg-white">
           {jobs.map((job) => (
             <div key={job.id}>
@@ -544,10 +533,8 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                 </div>
               </div>
 
-              {/* Expandable Job Details - Accordion Style */}
               {selectedJob?.id === job.id && (
                 <div className="bg-gray-50 border-b p-3 md:p-4 md:hidden">
-                  {/* Job Title & Actions */}
                   <div className="bg-white rounded-lg shadow-sm p-4 mb-4">
                     <div className="flex items-start justify-between mb-4">
                       <h1 className="text-lg font-bold text-gray-800 pr-2">
@@ -597,7 +584,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                       </button>
                     </div>
 
-                    {/* Contact Details */}
                     <div className="border-t mt-4 pt-4">
                       <h3 className="text-xs font-semibold text-gray-500 uppercase mb-3">
                         CONTACT DETAILS
@@ -677,7 +663,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                     </div>
                   </div>
 
-                  {/* Job Location */}
                   <div className="bg-white rounded-lg shadow-sm p-4 mb-4">
                     <h3 className="text-xs font-semibold text-gray-500 uppercase mb-3">
                       JOB LOCATION
@@ -706,7 +691,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                     </div>
                   </div>
 
-                  {/* About the Job */}
                   <div className="bg-white rounded-lg shadow-sm p-4 mb-4">
                     <h3 className="text-xs font-semibold text-gray-500 uppercase mb-3">
                       ABOUT THE JOB
@@ -716,7 +700,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                     </p>
                   </div>
 
-                  {/* Job Details */}
                   <div className="bg-white rounded-lg shadow-sm p-4">
                     <h3 className="text-xs font-semibold text-gray-500 uppercase mb-3">
                       JOB DETAILS
@@ -750,11 +733,9 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
         </div>
       </div>
 
-      {/* Job Details Panel - Desktop Only */}
       <div className="hidden md:flex flex-1 bg-gray-50 overflow-y-auto">
         {selectedJob ? (
           <div className="w-full">
-            {/* Job Title & Actions */}
             <div className="p-5">
               <div className="border-b border-gray-300 mb-3">
                 <h1 className="text-2xl font-bold text-gray-800 mb-2">
@@ -787,7 +768,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                 </div>
               </div>
 
-              {/* Contact Details */}
               <div className="flex items-center justify-between border-t border-gray-300">
                 <div className="pt-4">
                   <h3 className="text-sm font-semibold text-gray-500 uppercase mb-3">
@@ -857,7 +837,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
               </div>
             </div>
 
-            {/* Job Location */}
             <div className="p-6">
               <h3 className="text-sm font-semibold text-gray-500 uppercase mb-3">
                 JOB LOCATION
@@ -886,7 +865,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
               </div>
             </div>
 
-            {/* About the Job */}
             <div className="p-6">
               <h3 className="text-sm font-semibold text-gray-500 uppercase mb-3">
                 ABOUT THE JOB
@@ -894,7 +872,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
               <p className="text-gray-700 ml-3">{selectedJob.description}</p>
             </div>
 
-            {/* Job Details */}
             <div className="p-6">
               <h3 className="text-sm font-semibold text-gray-500 uppercase mb-4">
                 JOB DETAILS

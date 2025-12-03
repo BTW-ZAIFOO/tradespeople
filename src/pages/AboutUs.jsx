@@ -1,22 +1,18 @@
 import React from "react";
-import Header from "../components/Header"; // Adjust path if needed
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const AboutUs = () => {
   return (
     <>
       <Header />
-
       <section className="bg-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Box container */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 shadow-md space-y-8">
-            {/* Page title aligned left */}
             <h1 className="text-3xl sm:text-4xl font-bold text-left text-[rgb(80,85,102)]">
               About Us
             </h1>
 
-            {/* Intro paragraph */}
             <p className="text-lg leading-relaxed text-gray-800">
               MyTradeLinks.co.uk seeks to connect homeowners with local
               tradespeople. Our online service is designed with both homeowners
@@ -25,7 +21,6 @@ const AboutUs = () => {
               to support their business.
             </p>
 
-            {/* Who we are */}
             <div className="space-y-3">
               <h2 className="text-2xl font-semibold text-[rgb(80,85,102)]">
                 Who are we?
@@ -39,7 +34,6 @@ const AboutUs = () => {
               </p>
             </div>
 
-            {/* How service works */}
             <div className="space-y-3">
               <h2 className="text-2xl font-semibold text-[rgb(80,85,102)]">
                 How our service works
@@ -63,7 +57,6 @@ const AboutUs = () => {
               </ul>
             </div>
 
-            {/* Why use service as homeowner */}
             <div className="space-y-3">
               <h2 className="text-2xl font-semibold text-[rgb(80,85,102)]">
                 Why use our service as a homeowner?
@@ -82,7 +75,6 @@ const AboutUs = () => {
               </ul>
             </div>
 
-            {/* Why join as tradesperson */}
             <div className="space-y-3">
               <h2 className="text-2xl font-semibold text-[rgb(80,85,102)]">
                 Why join as a tradesperson?
@@ -106,25 +98,15 @@ const AboutUs = () => {
               </ul>
             </div>
 
-            {/* Call to Action */}
             <div className="text-center mt-10 md:mt-12">
               <h3 className="text-2xl md:text-3xl lg:text-2xl font-semibold mb-4 md:mb-6 text-[rgb(80,85,102)]">
                 Ready to get a price for your home improvement project?
               </h3>
 
-              {/* Button centered and forced under heading ONLY on tablet */}
               <div className="flex justify-center">
                 <button
                   onClick={() => (window.location.href = "/post-job")}
-                  className="
-        px-8 py-3 
-        bg-[#40D4E8] text-white font-semibold rounded-lg 
-        hover:opacity-90 transition
-        
-        md:px-10 md:py-4 md:text-lg 
-        lg:text-base lg:px-8 lg:py-3
-        cursor-pointer
-      "
+                  className="px-8 py-3 bg-[#40D4E8] text-white font-semibold rounded-lg hover:opacity-90 transition md:px-10 md:py-4 md:text-lg lg:text-base lg:px-8 lg:py-3 cursor-pointer"
                 >
                   Get Started
                 </button>

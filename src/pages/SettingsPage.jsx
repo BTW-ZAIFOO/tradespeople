@@ -120,13 +120,9 @@ const SettingsPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
-
-      {/* Settings Page Content */}
       <div className="max-w-6xl mx-auto p-8">
         <div className="p-8">
-          {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-700 mb-3">
               My Settings
@@ -137,7 +133,6 @@ const SettingsPage = () => {
             </p>
           </div>
 
-          {/* Settings Categories Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 px-4 sm:px-10 md:px-16 lg:px-20 py-5 bg-gray-100 rounded shadow-sm">
             {settingsCategories.map((category, index) => (
               <button

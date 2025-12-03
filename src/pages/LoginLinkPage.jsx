@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../components/Header"; // ✅ adjust the path if needed
-import Footer from "../components/Footer"; // ✅ adjust the path if needed
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const LoginLinkPage = () => {
   return (
     <>
-      <Header /> {/* ✅ Top Header */}
+      <Header />
       <div className="flex justify-center items-center min-h-screen bg-[#f6f9ff] py-20">
         <div className="bg-white shadow-md rounded-md p-10 w-[400px]">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">
@@ -16,7 +16,6 @@ const LoginLinkPage = () => {
             account.
           </p>
 
-          {/* Email Address */}
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-medium mb-1">
               Email address<span className="text-red-500">*</span>
@@ -28,12 +27,10 @@ const LoginLinkPage = () => {
             />
           </div>
 
-          {/* Email me button */}
           <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md mb-4 cursor-pointer">
             Email me
           </button>
 
-          {/* or Reset Password */}
           <div className="text-center text-gray-600 text-sm">
             <span className="mx-2">or</span>
             <a href="#" className="text-red-500 hover:underline">
@@ -42,7 +39,7 @@ const LoginLinkPage = () => {
           </div>
         </div>
       </div>
-      <Footer /> {/* ✅ Bottom Footer */}
+      <Footer />
     </>
   );
 };

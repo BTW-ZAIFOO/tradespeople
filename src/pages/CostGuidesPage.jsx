@@ -193,7 +193,6 @@ const CostGuidesPage = () => {
     >
       <Header />
 
-      {/* Hero Section */}
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
@@ -204,10 +203,8 @@ const CostGuidesPage = () => {
             hundreds of home improvement jobs.
           </p>
 
-          {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-12">
             <div className="relative shadow-none sm:shadow-2xl bg-transparent">
-              {/* Left Search Icon */}
               <span className="absolute mt-6 md:mt-0 left-4 md:top-1/2 md:-translate-y-1/2 text-gray-400 pointer-events-none">
                 <svg
                   className="w-5 h-5 sm:w-6 sm:h-6"
@@ -224,30 +221,15 @@ const CostGuidesPage = () => {
                 </svg>
               </span>
 
-              {/* Search Input */}
               <input
                 type="text"
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className=" bg-transparent
-        w-full py-4 text-lg border-2 border-gray-300 rounded-lg 
-        pl-12 
-        pr-4 sm:pr-32 
-        focus:border-primary focus:outline-none
-      "
+                className=" bg-transparent w-full py-4 text-lg border-2 border-gray-300 rounded-lg pl-12 pr-4 sm:pr-32 focus:border-primary focus:outline-none"
               />
 
-              {/* Search Button — responsive */}
-              <button
-                className="
-        bg-green-500 text-white rounded-md text-sm font-medium
-        sm:absolute sm:right-3 sm:top-1/2 sm:-translate-y-1/2
-        sm:px-6 sm:py-3
-        px-6 sm:w-auto py-3 mt-3 sm:mt-0
-        cursor-pointer
-      "
-              >
+              <button className="bg-green-500 text-white rounded-md text-sm font-medium sm:absolute sm:right-3 sm:top-1/2 sm:-translate-y-1/2 sm:px-6 sm:py-3 px-6 sm:w-auto py-3 mt-3 sm:mt-0 cursor-pointer">
                 Search
               </button>
             </div>
@@ -255,9 +237,7 @@ const CostGuidesPage = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Indoor Categories */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
             Indoor categories
@@ -303,7 +283,6 @@ const CostGuidesPage = () => {
           </div>
         </section>
 
-        {/* Outdoor Categories */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
             Outdoor categories
@@ -349,7 +328,6 @@ const CostGuidesPage = () => {
           </div>
         </section>
 
-        {/* Popular Cost Guides */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
             Popular Cost Guides

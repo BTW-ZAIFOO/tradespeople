@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/mytradelinks-logo.png";
 
-// React Icons
 import {
   HiMiniWrenchScrewdriver,
   HiMiniStar,
@@ -20,7 +19,6 @@ const Sidebar = ({ closeSidebar }) => {
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
 
-  // Check if any Manage link is active
   const isManageActive = [
     "/dashboard/jobs",
     "/dashboard/reviews",
@@ -31,7 +29,6 @@ const Sidebar = ({ closeSidebar }) => {
     "/dashboard/settings",
   ].some((path) => location.pathname === path);
 
-  // Check if any Help link is active
   const isHelpActive = ["/dashboard/support", "/dashboard/faq"].some(
     (path) => location.pathname === path
   );
@@ -42,7 +39,6 @@ const Sidebar = ({ closeSidebar }) => {
 
   return (
     <div className="w-full lg:w-64 bg-white shadow-lg h-screen overflow-y-auto flex flex-col">
-      {/* Logo Section */}
       <div className="flex items-start justify-between">
         <Link
           to="/"
@@ -56,7 +52,6 @@ const Sidebar = ({ closeSidebar }) => {
           />
         </Link>
 
-        {/* Close Button - Mobile Only */}
         <button
           onClick={closeSidebar}
           className="lg:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition cursor-pointer"
@@ -78,7 +73,6 @@ const Sidebar = ({ closeSidebar }) => {
         </button>
       </div>
 
-      {/* User Section */}
       <div className="px-4 lg:px-6 py-3 lg:py-9 bg-gray-100">
         <div className="flex flex-col items-center -mt-5">
           <div className="w-16 lg:w-24 h-16 lg:h-24 bg-gray-200 rounded-full mb-2 flex items-center justify-center shrink-0">
@@ -155,9 +149,7 @@ const Sidebar = ({ closeSidebar }) => {
         </div>
       </div>
 
-      {/* Navigation */}
       <nav className="flex-1">
-        {/* Dashboard */}
         <Link
           to="/dashboard"
           onClick={handleLinkClick}
@@ -167,12 +159,10 @@ const Sidebar = ({ closeSidebar }) => {
           Dashboard
         </Link>
 
-        {/* MANAGE Heading */}
         <div className="px-6 py-3 text-left mt-4 text-gray-700">
           <h3 className="text-[11px] font-bold uppercase">Manage</h3>
         </div>
 
-        {/* MANAGE Links */}
         {[
           {
             path: "/dashboard/jobs",
@@ -235,14 +225,12 @@ const Sidebar = ({ closeSidebar }) => {
           </Link>
         ))}
 
-        {/* HELP Heading */}
         <div className="px-6 py-3 text-left mt-4 text-gray-700">
           <h3 className="text-[11px] font-bold uppercase">
             Help
           </h3>
         </div>
 
-        {/* HELP Links */}
         {[
           {
             path: "/dashboard/support",

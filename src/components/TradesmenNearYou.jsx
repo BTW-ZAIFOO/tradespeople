@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import myImage from "../assets/tradesnearyou.png"; // Replace with your saved image path
+import myImage from "../assets/tradesnearyou.png"; 
 
 const TradesmenNearYou = () => {
   const cities = [
@@ -35,7 +35,6 @@ const TradesmenNearYou = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Centered Heading and Description */}
         <div className="text-center mb-12">
           <h2
             className="text-3xl md:text-4xl font-bold mb-4"
@@ -50,9 +49,7 @@ const TradesmenNearYou = () => {
           </p>
         </div>
 
-        {/* Image + City Buttons */}
         <div className="flex flex-col lg:flex-row items-start gap-12">
-          {/* Left Image */}
           <div className="lg:w-1/2">
             <img
               src={myImage}
@@ -61,9 +58,7 @@ const TradesmenNearYou = () => {
             />
           </div>
 
-          {/* Right Content */}
           <div className="lg:w-1/2">
-            {/* City Buttons */}
             <div className="flex flex-wrap gap-4 justify-start">
               {cities.map((city, index) => (
                 <Link
@@ -72,7 +67,7 @@ const TradesmenNearYou = () => {
                   className="py-2 px-4 rounded-lg font-medium transition-colors duration-300"
                   style={{
                     backgroundColor: "#f4f9ff",
-                    color: "#00A896", // changed text color
+                    color: "#00A896", 
                     minWidth: "120px",
                     textAlign: "center",
                   }}
@@ -82,7 +77,7 @@ const TradesmenNearYou = () => {
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = "#f4f9ff";
-                    e.currentTarget.style.color = "#00A896"; // changed text color back
+                    e.currentTarget.style.color = "#00A896"; 
                   }}
                 >
                   {city.name}
@@ -90,13 +85,12 @@ const TradesmenNearYou = () => {
               ))}
             </div>
 
-            {/* See all locations button centered at bottom */}
             <div className="mt-8 text-center">
               <button
                 className="py-2 px-6 rounded-lg font-medium transition-colors duration-300 underline cursor-pointer"
                 style={{
                   backgroundColor: "#f4f9ff",
-                  color: "#00A896", // changed text color
+                  color: "#00A896", 
                   textAlign: "center",
                 }}
                 onMouseEnter={(e) => {
@@ -105,7 +99,7 @@ const TradesmenNearYou = () => {
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = "#f4f9ff";
-                  e.currentTarget.style.color = "#00A896"; // changed text color back
+                  e.currentTarget.style.color = "#00A896"; 
                 }}
               >
                 See all locations

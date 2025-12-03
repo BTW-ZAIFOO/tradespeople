@@ -68,9 +68,8 @@ const WhyUse = () => {
 
   return (
     <>
-      <section className="py-16 bg-[#f5f9ff] border-b border-gray-200">
+      <div className="py-16 bg-[#f5f9ff] border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          {/* Title */}
           <h2 className="text-3xl md:text-4xl font-bold text-[rgb(80,85,102)] mb-2">
             Why Use MyTradeLinks
           </h2>
@@ -79,7 +78,6 @@ const WhyUse = () => {
             local tradesperson.
           </p>
 
-          {/* Review boxes */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="bg-white rounded-lg p-6 shadow-md w-full sm:w-[45%] md:w-[40%] lg:w-[30%] flex flex-col items-center">
               <img
@@ -120,7 +118,6 @@ const WhyUse = () => {
             </div>
           </div>
 
-          {/* Testimonials */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {reviews.map((review, index) => (
               <div
@@ -137,7 +134,6 @@ const WhyUse = () => {
             ))}
           </div>
 
-          {/* Bottom link */}
           <a
             href="#"
             className="text-[rgb(80,85,102)] underline font-semibold text-lg"
@@ -145,18 +141,15 @@ const WhyUse = () => {
             See all reviews
           </a>
         </div>
-      </section>
+      </div>
 
-      {/* Local Trades Section */}
-      <section className="py-16 bg-[#f5f9ff] border-b border-gray-200">
+      <div className="py-16 bg-[#f5f9ff] border-b border-gray-200">
         <div className="max-w-6xl mx-auto text-center px-4">
-          {/* Heading */}
           <h2 className="font-bold text-[#1d4ed8] mb-2 flex items-center gap-2 justify-center md:justify-start text-center md:text-left">
             <span className="block w-1.5 h-5 bg-blue-600"></span>
             SEE LOCAL TRADES IN YOUR AREA
           </h2>
 
-          {/* Trades grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8 text-orange-500 text-sm text-center md:text-left">
             {counties.map((county, index) => (
               <div key={index} className="hover:underline cursor-pointer">
@@ -165,7 +158,7 @@ const WhyUse = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

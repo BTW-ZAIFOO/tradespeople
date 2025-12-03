@@ -10,11 +10,10 @@ const SecondSection = () => {
 
   return (
     <section className="py-10 bg-white flex flex-col md:flex-row justify-center items-center md:gap-4 gap-6 px-4 text-center md:text-left">
-      {/* Text */}
       <h2
         className="text-[30px] font-extrabold"
         style={{
-          color: "rgb(80, 85, 102)", // ✅ original color
+          color: "rgb(80, 85, 102)",
           fontFamily: "'Poppins', sans-serif",
           fontWeight: "750",
           margin: 0,
@@ -23,11 +22,10 @@ const SecondSection = () => {
         Over 50,000 tradespeople nationwide use MyTradeLinks
       </h2>
 
-      {/* Button */}
       <button
         onClick={handleClick}
         style={{
-          backgroundColor: "#40D4E8", // ✅ original button color
+          backgroundColor: "#40D4E8",
           color: "white",
           border: "none",
           borderRadius: "8px",

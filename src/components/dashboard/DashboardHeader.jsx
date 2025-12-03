@@ -2,16 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/mytradelinks-logo.png";
 
-
 const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
   const [showAccountMenu, setShowAccountMenu] = useState(false);
-
-  // NEW — Notification Sidebar State
   const [notifOpen, setNotifOpen] = useState(false);
 
   return (
     <>
-      {/* ===================== BLACK FADE BACKGROUND ===================== */}
       <div
         className={`fixed inset-0 z-40 transition-opacity duration-300 ${
           notifOpen ? "opacity-70 visible" : "opacity-0 invisible"
@@ -25,16 +21,14 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
         }}
       ></div>
 
-      {/* ===================== RIGHT NOTIFICATION SIDEBAR ===================== */}
       <div
         className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-xl z-50 transition-transform duration-300 transform md:block overflow-y-auto ${
           notifOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* ===== USER INFO ===== */}
         <div className="flex items-center gap-3 p-5 border-b border-gray-200">
           <img
-            src="https://i.pravatar.cc/40" // replace with actual user image
+            src="https://i.pravatar.cc/40" 
             alt="User"
             className="w-12 h-12 rounded-full object-cover"
           />
@@ -44,7 +38,6 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
           </div>
         </div>
 
-        {/* ===== NOTIFICATIONS HEADER ===== */}
         <div className="p-5 flex items-center justify-between bg-gray-100">
           <h2 className="text-base font-medium text-gray-700">
             Recent Notifications
@@ -57,7 +50,6 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
           </button>
         </div>
 
-        {/* ===== NOTIFICATION ITEMS ===== */}
         <div className="p-5 space-y-6 overflow-y-auto h-full">
           <div className="flex items-start gap-2 border-b border-gray-300 pb-2">
             <span className="text-red-500 text-xl">⚠️</span>
@@ -87,18 +79,14 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
         </div>
       </div>
 
-      {/* ===================== ORIGINAL HEADER (UNCHANGED STRUCTURE) ===================== */}
       <header className=" bg-transparent border-b border-gray-200 sticky top-0 z-20 w-full">
         <div className="flex flex-col">
-          {/* Top Row - Logo and Hamburger */}
           <div className="flex items-center justify-between px-4 lg:px-24 py-3 border-gray-100">
             <div className="flex items-center space-x-2 lg:space-x-6">
-              {/* Mobile Logo */}
               <Link to="/" className="lg:hidden flex items-center gap-2">
                 <img src={logoImage} alt="Logo" className="h-12 w-auto" />
               </Link>
 
-              {/* Desktop Navigation - Logo only on mobile */}
               <div className="hidden lg:flex items-center space-x-6">
                 <Link
                   to="/dashboard"
@@ -115,9 +103,7 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
               </div>
             </div>
 
-            {/* Right: Notifications & Account - Desktop Only */}
             <div className="hidden lg:flex items-center space-x-4">
-              {/* Account Dropdown */}
               <div className="relative">
                 <button
                   onClick={() => setShowAccountMenu(!showAccountMenu)}
@@ -161,9 +147,8 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
                 )}
               </div>
 
-              {/* ===================== NOTIFICATION BELL ===================== */}
               <button
-                onClick={() => setNotifOpen(true)} // <-- ADDED
+                onClick={() => setNotifOpen(true)} 
                 className="relative p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition cursor-pointer"
               >
                 <svg
@@ -184,7 +169,6 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
             </div>
           </div>
 
-          {/* ===================== Mobile Navigation Bar ===================== */}
           <div className="lg:hidden flex items-center justify-around border-t border-gray-100 bg-gray-50">
             <Link
               to="/dashboard"
@@ -247,7 +231,7 @@ const DashboardHeader = ({ toggleSidebar, sidebarOpen }) => {
             </Link>
 
             <button
-              onClick={() => setNotifOpen(true)} // <-- ADDED
+              onClick={() => setNotifOpen(true)} 
               className="flex-1 flex flex-col items-center justify-center py-3 text-gray-600 hover:text-blue-500 hover:bg-gray-100 transition border-b-2 border-transparent hover:border-blue-500 relative cursor-pointer"
             >
               <svg

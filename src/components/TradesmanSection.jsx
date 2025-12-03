@@ -6,14 +6,13 @@ const TradesmanSection = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/signup-trade"); // Route to SignupTradePage
+    navigate("/signup-trade");
   };
 
   return (
     <section className="py-16 bg-white text-[rgb(80,85,102)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* ✅ Left Side - Image */}
           <div className="flex justify-center">
             <img
               src={tradesmanImg}
@@ -22,7 +21,6 @@ const TradesmanSection = () => {
             />
           </div>
 
-          {/* ✅ Right Side - Text Only */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Are you a tradesman?
@@ -33,7 +31,6 @@ const TradesmanSection = () => {
               types of tradespeople across the UK.
             </p>
 
-            {/* ✅ Get Started Button */}
             <button
               onClick={handleGetStarted}
               style={{

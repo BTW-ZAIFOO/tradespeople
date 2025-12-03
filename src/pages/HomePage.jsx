@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import SecondSection from "../components/SecondSection";
-
 import HowItWorks from "../components/HowItWorks";
 import Featured from "../components/Featured";
 import PopularTrades from "../components/PopularTrades";
@@ -11,7 +10,6 @@ import Reviews from "../components/Reviews";
 import CostGuides from "../components/CostGuides";
 import TradesmenNearYou from "../components/TradesmenNearYou";
 import GetPriceCTA from "../components/GetPriceCTA";
-
 import LatestArticles from "../components/LatestArticles";
 import FindTradesPerson from "../components/FindTradesPerson";
 import FindTradesmanCTA from "../components/FindTradesmanCTA";

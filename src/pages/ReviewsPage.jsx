@@ -6,12 +6,9 @@ const ReviewsPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
-
       <div className="max-w-6xl mx-auto px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left Section - My Reviews */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded shadow-sm py-6 px-3">
               <h2 className="text-xl font-semibold text-gray-700 mb-6 pb-2 text-center border-b border-gray-300">
@@ -46,7 +43,6 @@ const ReviewsPage = () => {
               </div>
             </div>
 
-            {/* Homeowner Reviews */}
             <div className="bg-white shadow-sm p-6 mt-6">
               <div className="flex flex-col items-center justify-center py-8">
                 <svg
@@ -71,9 +67,7 @@ const ReviewsPage = () => {
             </div>
           </div>
 
-          {/* Right Section - Tabs */}
           <div className="lg:col-span-2">
-            {/* Tabs */}
             <div className="bg-white flex items-center gap-4 mb-3 shadow-sm overflow-x-auto">
               <button
                 onClick={() => setActiveTab("awaiting")}
@@ -108,7 +102,6 @@ const ReviewsPage = () => {
                 References
               </button>
 
-              {/* Star Icon */}
               <button className="ml-auto p-2 text-gray-400 hover:text-gray-600 cursor-pointer">
                 <svg
                   className="w-5 h-5"
@@ -120,7 +113,6 @@ const ReviewsPage = () => {
               </button>
             </div>
 
-            {/* Tab Content */}
             <div className="bg-white shadow-sm">
               <div className="p-8">
                 {activeTab === "references" && (

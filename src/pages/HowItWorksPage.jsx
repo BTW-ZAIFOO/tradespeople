@@ -2,8 +2,6 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-
-// Import images
 import step1Img from "../assets/hiw1.png";
 import step2Img from "../assets/hiw2.png";
 import step3Img from "../assets/hiw3.png";
@@ -54,8 +52,6 @@ const HowItWorksPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
-      {/* Hero Section */}
       <section className="bg-linear-to-b from-gray-50 to-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1
@@ -74,11 +70,8 @@ const HowItWorksPage = () => {
         </div>
       </section>
 
-      {/* Steps Section */}
       <section className="py-12 md:py-20 relative">
         <div className="max-w-6xl mx-auto px-4">
-
-          {/* SINGLE FULL VERTICAL LINE — FIXED */}
           <div className="hidden md:block absolute left-1/2 top-20 bottom-0 w-1 bg-gray-200 -translate-x-1/2"></div>
 
           <div className="space-y-32">
@@ -87,7 +80,6 @@ const HowItWorksPage = () => {
 
               return (
                 <div key={index} className="relative">
-                  {/* Step Number Circle */}
                   <div className="flex justify-center mb-8">
                     <div
                       className="inline-flex items-center justify-center w-12 h-12 text-white rounded-full text-xl font-bold z-10"
@@ -97,9 +89,7 @@ const HowItWorksPage = () => {
                     </div>
                   </div>
 
-                  {/* Alternating Layout */}
                   <div className="grid md:grid-cols-2 gap-12 items-center">
-                    {/* TEXT */}
                     <div
                       className={
                         isOdd
@@ -122,7 +112,6 @@ const HowItWorksPage = () => {
                       </p>
                     </div>
 
-                    {/* IMAGE */}
                     <div
                       className={
                         isOdd
@@ -148,7 +137,6 @@ const HowItWorksPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="pb-16 flex justify-center bg-white">
         <div className="bg-[#f6faff] rounded-xl text-center px-8 py-10 shadow-sm max-w-md w-full">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">

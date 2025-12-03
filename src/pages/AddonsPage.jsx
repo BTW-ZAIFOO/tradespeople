@@ -24,12 +24,9 @@ const AddonsPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
-
       <div className="max-w-6xl mx-auto p-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left Section - My Addons */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-xl font-semibold text-gray-700 mb-6 text-center border-b border-gray-300 pb-2">
@@ -66,9 +63,7 @@ const AddonsPage = () => {
             </div>
           </div>
 
-          {/* Right Section - Tabs and Addons */}
           <div className="lg:col-span-2">
-            {/* Tabs */}
             <div className="bg-white flex items-center gap-4 mb-3 shadow-sm overflow-x-auto">
               <button
                 onClick={() => setActiveTab("subscriptions")}
@@ -101,7 +96,6 @@ const AddonsPage = () => {
                 Addons
               </button>
 
-              {/* Settings Icon */}
               <div className="flex items-center px-4">
                 <button className="p-2 text-gray-400 hover:text-gray-600 cursor-pointer">
                   <svg
@@ -127,12 +121,10 @@ const AddonsPage = () => {
               </div>
             </div>
 
-            {/* Tab Content */}
             <div className="bg-white rounded-lg shadow-sm">
               <div className="p-8">
                 {activeTab === "addons" && (
                   <div>
-                    {/* Extra Categories Section */}
                     <div className="mb-12">
                       <h2 className="text-2xl font-semibold text-gray-700 mb-6 border-b border-gray-300 pb-2">
                         Extra Categories
@@ -144,7 +136,6 @@ const AddonsPage = () => {
                             key={index}
                             className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 border border-gray-300 hover:border-blue-300 transition"
                           >
-                            {/* Left Area */}
                             <div className="flex-1 mb-3 sm:mb-0">
                               <h3 className="text-xl font-semibold text-orange-500">
                                 {addon.title}
@@ -156,7 +147,6 @@ const AddonsPage = () => {
                               </p>
                             </div>
 
-                            {/* Buttons */}
                             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 w-full sm:w-auto space-y-3 sm:space-y-0">
                               <button className="px-5 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition cursor-pointer w-full sm:w-auto">
                                 BUY NOW
@@ -170,7 +160,6 @@ const AddonsPage = () => {
                       </div>
                     </div>
 
-                    {/* SMS Addons Section */}
                     <div>
                       <h2 className="text-2xl font-semibold text-gray-700 mb-6 border-b border-gray-300 pb-2">
                         SMS Addons
@@ -178,7 +167,6 @@ const AddonsPage = () => {
 
                       <div className="space-y-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 border border-gray-300 hover:border-blue-300 transition">
-                          {/* Left Side */}
                           <div className="flex-1 mb-3 sm:mb-0">
                             <h3 className="text-xl font-semibold text-orange-500">
                               Instant Job SMS
@@ -189,7 +177,6 @@ const AddonsPage = () => {
                             </p>
                           </div>
 
-                          {/* Buttons */}
                           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 w-full sm:w-auto space-y-3 sm:space-y-0">
                             <button className="px-5 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition cursor-pointer w-full sm:w-auto">
                               BUY NOW

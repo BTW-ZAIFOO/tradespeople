@@ -20,15 +20,12 @@ const Footer = () => {
       }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        {/* MAIN GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
-          {/* Description Section */}
           <div className="lg:col-span-2 md:border-r md:border-gray-300 pr-6">
             <p className="text-gray-700 text-base leading-relaxed mb-8 font-normal">
               MyTradeLinks connects homeowners <br /> with local tradespeople.
               Hiring a tradesperson has never been so easy!
             </p>
-            {/* Social Media Icons */}
             <div>
               <h4
                 className="font-bold text-lg mb-4"
@@ -98,9 +95,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Footer Links */}
           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* About Us */}
             <div>
               <h4
                 className="font-bold text-lg mb-4"
@@ -152,7 +147,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Homeowners */}
             <div>
               <h4
                 className="font-bold text-lg mb-4"
@@ -212,7 +206,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Tradespeople */}
             <div>
               <h4
                 className="font-bold text-lg mb-4"
@@ -274,7 +267,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer */}
         <div className="border-t border-gray-400 pt-8">
           <div className="text-gray-700 text-sm font-normal">
             <div className="mb-2">

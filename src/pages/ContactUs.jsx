@@ -20,22 +20,18 @@ const ContactUs = () => {
   return (
     <>
       <Header />
-
       <section className="bg-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 shadow-md space-y-8">
-            {/* Page title */}
             <h1 className="text-3xl sm:text-4xl font-bold text-[rgb(80,85,102)]">
               Contact MyTradesLink
             </h1>
 
-            {/* Intro paragraph */}
             <p className="text-lg leading-relaxed text-gray-800">
               Search our help section or get in touch by answering the questions
               below.
             </p>
 
-            {/* Search bar with blue button */}
             <div className="flex space-x-2">
               <input
                 type="text"
@@ -47,7 +43,6 @@ const ContactUs = () => {
               </button>
             </div>
 
-            {/* How can we help you today: info boxes */}
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold text-[rgb(80,85,102)]">
                 How can we help you today? Please answer:
@@ -129,7 +124,6 @@ const ContactUs = () => {
               )}
             </div>
 
-            {/* Top Questions */}
             <div className="space-y-3">
               <h2 className="text-2xl font-semibold text-[rgb(80,85,102)]">
                 Top Questions
@@ -146,7 +140,6 @@ const ContactUs = () => {
               </div>
             </div>
 
-            {/* Submit button */}
             <div className="text-center mt-6">
               <button className="px-8 py-3 bg-[#40D4E8] text-white font-semibold rounded-lg hover:opacity-90 transition cursor-pointer">
                 Submit

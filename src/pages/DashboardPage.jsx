@@ -25,13 +25,11 @@ const DashboardPage = () => {
 
   return (
     <div className="flex flex-col h-full bg-gray-100 w-full">
-      {/* Main Content */}
       <div className="flex-1 overflow-y-auto w-full">
         <div className="max-w-7xl mx-auto">
           <QuickAccessCards />
         </div>
 
-        {/* Top Stats - Mobile */}
         <div className="lg:hidden bg-white border-b p-4 space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center text-gray-700">
@@ -99,9 +97,7 @@ const DashboardPage = () => {
         </div>
 
         <div className="lg:px-24 py-4">
-          {/* Main Content Area - Two Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            {/* Left Column - Recommended Jobs */}
             <div className="lg:col-span-2 bg-white rounded-lg shadow-sm p-6">
               <div className="flex items-center justify-between mb-4 border-b border-gray-300">
                 <div>
@@ -120,7 +116,6 @@ const DashboardPage = () => {
                 </span>
               </div>
 
-              {/* Filter Section */}
               <div className="border-b border-gray-300 mb-2">
                 <button
                   onClick={() => setIsFilterOpen(true)}
@@ -150,7 +145,6 @@ const DashboardPage = () => {
               </div>
               {isFilterOpen && (
                 <>
-                  {/* Background overlay */}
                   <div
                     onClick={() => setIsFilterOpen(false)}
                     className={` fixed inset-0 bg-black backdrop-blur-md z-40 transition-opacity duration-300 overflow-y-auto
@@ -158,9 +152,7 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
   `}
                   />
 
-                  {/* Sliding Sidebar */}
                   <div className="fixed top-0 left-0 h-full w-72 sm:w-80 bg-white shadow-xl z-50 transform transition-transform duration-300">
-                    {/* Header */}
                     <div className="flex items-center justify-between px-6 py-3">
                       <h2 className="text-lg font-semibold">Filter</h2>
                       <button
@@ -171,9 +163,7 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                       </button>
                     </div>
 
-                    {/* Sidebar Body */}
                     <div className="p-4 overflow-y-auto h-full">
-                      {/* DROPDOWN ITEM */}
                       <div className="border-b border-gray-300 pb-3">
                         <button
                           onClick={() => toggleDropdown("category")}
@@ -189,7 +179,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                           </span>
                         </button>
 
-                        {/* Options */}
                         {openDropdown === "category" && (
                           <div className="mt-2 pl-2 space-y-2 animate-fadeIn">
                             <label className="flex items-center">
@@ -208,7 +197,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                         )}
                       </div>
 
-                      {/* DROPDOWN ITEM */}
                       <div className="border-b border-gray-300 pb-3">
                         <button
                           onClick={() => toggleDropdown("date")}
@@ -254,7 +242,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                         )}
                       </div>
 
-                      {/* DROPDOWN ITEM */}
                       <div className="border-b border-gray-300 pb-3">
                         <button
                           onClick={() => toggleDropdown("price")}
@@ -286,7 +273,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                         )}
                       </div>
 
-                      {/* DROPDOWN ITEM */}
                       <div className="border-b border-gray-300 pb-3">
                         <button
                           onClick={() => toggleDropdown("tags")}
@@ -341,12 +327,10 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                   }`}
                 >
                   <div className="flex items-start justify-between mb-3 relative">
-                    {/* BLUE DOT WHEN SELECTED */}
                     {selectedJob === job.id && (
                       <span className="absolute -left-4 top-2 w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
                     )}
 
-                    {/* LEFT SECTION – TITLE + LOCATION */}
                     <div className="flex-1">
                       <div className="mb-2">
                         <h3 className="font-semibold text-gray-800">
@@ -378,20 +362,17 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                       </div>
                     </div>
 
-                    {/* RIGHT SIDE – CREDITS */}
                     <span className="text-blue-600 border border-gray-300 px-3 py-1 rounded-md font-normal text-sm ml-4 whitespace-nowrap mt-2">
                       {job.credits} credits
                     </span>
                   </div>
 
-                  {/* CENTER SECTION – DESCRIPTION */}
                   <div className="text-left">
                     <p className="text-sm text-gray-700 mb-3">
                       {job.description}
                     </p>
                   </div>
 
-                  {/* BOTTOM SECTION – TIME AGO */}
                   <div className="flex items-center justify-start text-sm mt-1">
                     <span className="text-gray-500 flex items-center">
                       <svg
@@ -414,9 +395,7 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
               ))}
             </div>
 
-            {/* Right Column - Stats + New Sections */}
             <div className="hidden lg:block space-y-6">
-              {/* New Jobs Section */}
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center text-gray-700">
@@ -441,7 +420,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                 </div>
               </div>
 
-              {/* Purchased Jobs */}
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center text-gray-700">
@@ -466,7 +444,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                 </div>
               </div>
 
-              {/* Reviews */}
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center text-gray-700">
@@ -490,7 +467,7 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                   </span>
                 </div>
               </div>
-              {/* Things to do Section */}
+
               <div className="bg-gray-50 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-800 mb-4">
                   Things to do
@@ -585,7 +562,7 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                   </div>
                 </div>
               </div>
-              {/* Profile Section */}
+
               <div className="bg-white rounded-lg shadow-sm p-4 w-full">
                 <div className="flex items-center gap-2 mb-2">
                   <FaUserCircle className="text-gray-600 text-2xl" />
@@ -607,13 +584,11 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                 </button>
               </div>
 
-              {/* Membership Section */}
               <div className="bg-white rounded-lg shadow-sm p-4 w-full">
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
                   Membership
                 </h3>
 
-                {/* Pro + Verify */}
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <FaTag className="text-gray-500 text-sm" />
@@ -624,7 +599,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                   </p>
                 </div>
 
-                {/* Credits + Top Up */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <FaTag className="text-gray-500 text-sm" />
@@ -636,15 +610,12 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                 </div>
               </div>
 
-              {/* Preferences Section */}
               <div className="bg-white rounded-lg shadow-sm p-4 w-full">
-                {/* Header */}
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                   Preferences
                 </h3>
                 <div className="border-t border-gray-200 mb-4"></div>
 
-                {/* Trade Categories */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between">
                     <p className="text-sm text-gray-800 font-medium">
@@ -658,7 +629,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                     You'll receive job leads for the following:
                   </p>
 
-                  {/* Rounded Buttons */}
                   <div className="flex flex-wrap gap-2 mt-3">
                     <button className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-green-100 transition cursor-pointer">
                       Architect
@@ -671,7 +641,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
 
                 <div className="border-t border-gray-100 my-4"></div>
 
-                {/* Job Notifications */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between">
                     <p className="text-sm text-gray-800 font-medium">
@@ -691,7 +660,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
 
                 <div className="border-t border-gray-200 my-4"></div>
 
-                {/* Let us know if you're busy */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-sm text-gray-800 font-medium">
@@ -702,9 +670,7 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                     </button>
                   </div>
 
-                  {/* Status Box */}
                   <div className="flex items-center gap-3 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2">
-                    {/* Toggle switch */}
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input
                         type="checkbox"
@@ -714,7 +680,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                       <div className="w-10 h-5 bg-gray-300 rounded-full peer peer-checked:bg-[#40D4E8] after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border after:border-gray-300 after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
                     </label>
 
-                    {/* Status text */}
                     <p className="text-sm text-gray-700">
                       Current Status:{" "}
                       <span className="font-medium">
@@ -725,9 +690,7 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                 </div>
               </div>
 
-              {/* Stats Section */}
               <div className="space-y-3">
-                {/* Purchased Jobs */}
                 <div className="flex items-center justify-between bg-white rounded-lg shadow-sm p-4 w-full">
                   <div className="flex items-center gap-3">
                     <FaBriefcase className="text-gray-500 text-xl" />
@@ -736,7 +699,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                   <p className="text-lg font-semibold text-gray-800">0</p>
                 </div>
 
-                {/* Homeowner Reviews */}
                 <div className="flex items-center justify-between bg-white rounded-lg shadow-sm p-4 w-full">
                   <div className="flex items-center gap-3">
                     <FaThumbsUp className="text-gray-500 text-xl" />
@@ -745,7 +707,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                   <p className="text-lg font-semibold text-gray-800">0</p>
                 </div>
 
-                {/* Credit Balance */}
                 <div className="flex items-center justify-between bg-white rounded-lg shadow-sm p-4 w-full">
                   <div className="flex items-center gap-3">
                     <FaShoppingCart className="text-gray-500 text-xl" />
@@ -754,7 +715,6 @@ ${isFilterOpen ? "opacity-30" : "opacity-0 pointer-events-none"}
                   <p className="text-lg font-semibold text-gray-800">0</p>
                 </div>
 
-                {/* Questions Answered */}
                 <div className="flex items-center justify-between bg-white rounded-lg shadow-sm p-4 w-full">
                   <div className="flex items-center gap-3">
                     <FaQuestionCircle className="text-gray-500 text-xl" />

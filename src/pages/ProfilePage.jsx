@@ -72,19 +72,14 @@ const ProfilePage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
-
       <div className="max-w-6xl mx-auto p-9">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* Left Section - Profile Completion */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded shadow-sm p-8 text-center">
-              {/* Profile Completion Circle */}
               <div className="mb-6 flex justify-center">
                 <div className="relative w-32 h-32">
                   <svg className="w-full h-full" viewBox="0 0 120 120">
-                    {/* Background circle */}
                     <circle
                       cx="60"
                       cy="60"
@@ -93,7 +88,6 @@ const ProfilePage = () => {
                       stroke="#e5e7eb"
                       strokeWidth="3"
                     />
-                    {/* Progress circle */}
                     <circle
                       cx="60"
                       cy="60"
@@ -108,7 +102,6 @@ const ProfilePage = () => {
                       transform="rotate(-90 60 60)"
                     />
                   </svg>
-                  {/* Center text */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div>
                       <p className="text-3xl font-bold text-gray-800">89%</p>
@@ -127,9 +120,7 @@ const ProfilePage = () => {
             </div>
           </div>
 
-          {/* Right Section - Tabs and Form */}
           <div className="lg:col-span-3">
-            {/* Tabs */}
             <div className="bg-white flex items-center gap-4 mb-3 shadow-sm overflow-x-auto">
               {tabs.map((tab) => (
                 <button
@@ -145,7 +136,6 @@ const ProfilePage = () => {
                 </button>
               ))}
 
-              {/* Settings Icon */}
               <div className="ml-auto flex items-center px-6">
                 <button className="p-2 text-gray-400 hover:text-gray-600 cursor-pointer">
                   <svg
@@ -171,27 +161,11 @@ const ProfilePage = () => {
               </div>
             </div>
             <div className="bg-white rounded shadow-sm">
-              {/* Back Button */}
-              {/* {tabFromQuery && (
-                <div className="px-6 pt-4 pb-2">
-                  <button
-                    onClick={() => navigate('/dashboard/settings')}
-                    className="text-orange-500 hover:text-orange-600 font-semibold flex items-center gap-2 text-sm"
-                  >
-                    ← Back to Settings
-                  </button>
-                </div>
-              )} */}
-
-              {/* Tab Content */}
               <div className="p-8">
                 {activeTab === "profile" && (
                   <div>
                     <div className="space-y-8">
-                      {/* <div className="bg-gray-50 rounded p-6"> */}
-                      {/* PROFILE IMAGE AND COMPANY DESCRIPTION SECTION */}
                       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        {/* Profile Image Upload */}
                         <div>
                           <h3 className="text-gray-700 font-semibold text-sm uppercase mb-4">
                             Profile Image
@@ -238,7 +212,6 @@ const ProfilePage = () => {
                           </label>
                         </div>
 
-                        {/* Company Description */}
                         <div className="lg:col-span-2">
                           <h3 className="text-gray-700 font-semibold text-sm uppercase mb-4">
                             Company Description
@@ -257,7 +230,6 @@ const ProfilePage = () => {
                         </div>
                       </div>
 
-                      {/* COMPANY INFORMATION SECTION */}
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div>
                           <label className="block text-sm font-semibold text-gray-700 mb-2 uppercase">
@@ -381,15 +353,12 @@ const ProfilePage = () => {
                         </div>
                       </div>
 
-                      {/* Save Button */}
                       <button className="px-8 py-3 bg-orange-500 text-white font-bold cursor-pointer rounded hover:bg-orange-600 transition">
                         Save changes
                       </button>
                     </div>
-                    {/* </div> */}
                     <div className="space-y-8 mt-10">
                       <div className="bg-gray-50 rounded-lg p-6">
-                        {/* Job Gallery Section */}
                         <div>
                           <div className="flex items-center justify-between mb-6">
                             <h3 className="text-gray-700 font-semibold text-lg">
@@ -428,7 +397,6 @@ const ProfilePage = () => {
                         </div>
                       </div>
 
-                      {/* Web Profiles Section */}
                       <div>
                         <div className="bg-gray-50 rounded p-6">
                           <h3 className="text-gray-700 font-semibold text-lg mb-6">
@@ -472,7 +440,6 @@ const ProfilePage = () => {
                             </div>
                           </div>
 
-                          {/* Save Button */}
                           <div className="mt-8">
                             <button className="px-8 py-3 bg-orange-500 text-white cursor-pointer font-bold rounded hover:bg-orange-600 transition">
                               Save changes
@@ -483,7 +450,6 @@ const ProfilePage = () => {
                     </div>
 
                     <div className="space-y-8 mt-2">
-                      {/* Home Address Section */}
                       <div className="bg-gray-50 rounded p-6">
                         <div className="flex items-center justify-between mb-6">
                           <h3 className="text-gray-700 font-semibold text-lg">
@@ -617,7 +583,6 @@ const ProfilePage = () => {
                         </button>
                       </div>
 
-                      {/* Business Address Section */}
                       <div className="bg-gray-50 rounded p-6">
                         <div className="flex items-center justify-between mb-6">
                           <h3 className="text-gray-700 font-semibold text-lg">
@@ -658,13 +623,9 @@ const ProfilePage = () => {
                     </div>
                   </div>
                 )}
-
                 {activeTab === "categories" && <Categories />}
-
                 {activeTab === "locations" && <Locations />}
-
                 {activeTab === "preferences" && <Preferences />}
-
                 {activeTab === "login" && <Login />}
               </div>
             </div>

@@ -11,7 +11,6 @@ const Header = () => {
   const [showMobileButton, setShowMobileButton] = useState(false);
   const { currentUser } = useUser();
 
-  // Track scroll position to toggle desktop scrolled header & mobile button
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 150) {
@@ -28,7 +27,6 @@ const Header = () => {
 
   return (
     <header className="relative z-50 shadow-sm">
-      {/* Desktop full navbar */}
       <div
         className={`hidden lg:flex max-w-6xl mx-auto items-center justify-between h-20 transition-transform duration-300 ${
           showScrolledHeader ? "-translate-y-full" : "translate-y-0"
@@ -57,7 +55,6 @@ const Header = () => {
             Cost guides
           </Link>
 
-          {/* Categories Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setIsCategoriesOpen(true)}
@@ -100,8 +97,9 @@ const Header = () => {
                           </Link>
                         </div>
                         <div className="space-y-1 pl-8">
-                          {category.subcategories?.slice(0, 4).map(
-                            (sub, subIndex) => (
+                          {category.subcategories
+                            ?.slice(0, 4)
+                            .map((sub, subIndex) => (
                               <Link
                                 key={subIndex}
                                 to={`/category/${category.slug}`}
@@ -110,16 +108,15 @@ const Header = () => {
                               >
                                 {sub.name}
                               </Link>
-                            )
-                          )}
+                            ))}
                         </div>
                       </div>
                     ))}
                   </div>
                   <div className="border-t border-gray-200 pt-4">
                     <p className="text-gray-600 text-sm mb-2">
-                      Need something more specialist? Check out our full list
-                      of trades.
+                      Need something more specialist? Check out our full list of
+                      trades.
                     </p>
                     <Link
                       to="/"
@@ -135,7 +132,6 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* Desktop CTA Buttons + Login (Login only visible on full navbar) */}
         <div className="flex items-center space-x-2 ">
           <Link
             to="/post-job"
@@ -160,7 +156,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Desktop scrolled header (Login hidden) */}
       <div
         className={`hidden lg:flex fixed top-0 left-0 w-full text-black bg-white items-center justify-between px-52 py-3 shadow-md transition-transform duration-300 z-50 h-20 ${
           showScrolledHeader ? "translate-y-0" : "-translate-y-full"
@@ -187,7 +182,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile header */}
       <div className="lg:hidden bg-white shadow-sm sticky top-0 z-40">
         <div className="flex justify-between items-center h-16 px-4">
           <button
@@ -237,7 +231,6 @@ const Header = () => {
               Cost guides
             </Link>
 
-            {/* Mobile Categories Dropdown */}
             <div className="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded relative">
               <button
                 onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
@@ -270,23 +263,24 @@ const Header = () => {
                       >
                         {category.name}
                       </Link>
-                      {category.subcategories?.slice(0, 4).map((sub, subIndex) => (
-                        <Link
-                          key={subIndex}
-                          to={`/category/${category.slug}`}
-                          className="block px-4 py-1 text-xs text-gray-600 hover:text-blue-600"
-                          onClick={() => setIsCategoriesOpen(false)}
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
+                      {category.subcategories
+                        ?.slice(0, 4)
+                        .map((sub, subIndex) => (
+                          <Link
+                            key={subIndex}
+                            to={`/category/${category.slug}`}
+                            className="block px-4 py-1 text-xs text-gray-600 hover:text-blue-600"
+                            onClick={() => setIsCategoriesOpen(false)}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
                     </div>
                   ))}
                 </div>
               )}
             </div>
 
-            {/* Mobile CTA buttons in hamburger menu */}
             <Link
               to="/post-job"
               className="block mt-2 px-3 py-2 text-white bg-[#40D4E8] rounded-md text-center font-medium"
@@ -309,7 +303,6 @@ const Header = () => {
         )}
       </div>
 
-      {/* Mobile scroll-triggered Post a Job button */}
       {showMobileButton && (
         <div className="lg:hidden fixed top-0 left-0 w-full px-4 py-3 bg-white shadow-md z-50 flex justify-center transition duration-300">
           <Link

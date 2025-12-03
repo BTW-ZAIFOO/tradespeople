@@ -105,20 +105,19 @@ const Reviews = () => {
     navigate("/signup-trade");
   };
 
-  // Auto scroll effect
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
     let scrollAmount = 0;
-    const cardHeight = container.firstChild?.offsetHeight + 24; // card height + gap
+    const cardHeight = container.firstChild?.offsetHeight + 24; 
     const interval = setInterval(() => {
-      scrollAmount += 1; // scroll 1px per tick
+      scrollAmount += 1; 
       if (scrollAmount >= container.scrollHeight / 2) {
         scrollAmount = 0;
       }
       container.scrollTop = scrollAmount;
-    }, 20); // every 20ms for smooth scroll
+    }, 20); 
 
     return () => clearInterval(interval);
   }, []);
@@ -126,7 +125,6 @@ const Reviews = () => {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Recent completed jobs
@@ -137,7 +135,6 @@ const Reviews = () => {
           </p>
         </div>
 
-        {/* Job Cards with auto-scroll */}
         <div className="relative">
           <div
             ref={scrollRef}
@@ -172,11 +169,9 @@ const Reviews = () => {
             ))}
           </div>
 
-          {/* Fade effect at the bottom */}
           <div className="absolute bottom-0 left-0 w-full h-24 bg-linear-to-t from-gray-50  to-transparent pointer-events-none rounded-2xl"></div>
         </div>
 
-        {/* Buttons */}
         <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={handlePostJob}

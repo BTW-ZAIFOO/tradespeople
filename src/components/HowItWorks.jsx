@@ -28,7 +28,6 @@ const HowItWorks = () => {
       className="py-20 bg-[#F5F9FF] flex flex-col items-center text-center"
       style={{ color: "rgb(80, 85, 102)", fontFamily: "'Poppins', sans-serif" }}
     >
-      {/* Heading */}
       <h2
         className="text-4xl md:text-4xl font-extrabold mb-2"
         style={{ color: "rgb(80, 85, 102)" }}
@@ -44,7 +43,6 @@ const HowItWorks = () => {
         connection service.It's free and only takes a minute!
       </p>
 
-      {/* Steps */}
       <div className="grid md:grid-cols-3 gap-20 px-6 md:px-20">
         {steps.map((step, index) => (
           <div key={index} className="flex flex-col items-center">
@@ -69,7 +67,6 @@ const HowItWorks = () => {
         ))}
       </div>
 
-      {/* Learn More Button */}
       <div className="mt-14">
         <button
           style={{

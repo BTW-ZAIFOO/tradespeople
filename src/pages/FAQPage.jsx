@@ -163,13 +163,9 @@ const FAQPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-
-      {/* Quick Access Cards */}
       <QuickAccessCards />
       <div className="max-w-6xl mx-auto p-8">
-        {/* FAQ Section */}
         <div className="bg-white rounded-lg shadow-sm p-8">
-          {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-800 mb-3">
               Frequently Asked Questions
@@ -179,7 +175,6 @@ const FAQPage = () => {
             </p>
           </div>
 
-          {/* Search */}
           <div className="mb-8">
             <input
               type="text"
@@ -190,7 +185,6 @@ const FAQPage = () => {
             />
           </div>
 
-          {/* FAQ Categories */}
           <div className="space-y-8">
             {filteredCategories.map(
               (category, idx) =>
@@ -245,7 +239,6 @@ const FAQPage = () => {
               )}
           </div>
 
-          {/* Still Have Questions Section */}
           <div className="mt-12 pt-8 border-t border-gray-200 bg-blue-50 rounded-lg p-6 text-center">
             <h3 className="text-xl font-bold text-gray-800 mb-2">
               Still Have Questions?

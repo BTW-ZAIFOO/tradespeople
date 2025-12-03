@@ -4,7 +4,6 @@ import QuickAccessCards from "../components/dashboard/QuickAccessCards";
 const QAPage = () => {
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
       <div className="max-w-6xl mx-auto p-8">
         <div className="bg-white rounded-lg shadow-sm p-6">

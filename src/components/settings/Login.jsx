@@ -37,7 +37,6 @@ const Login = () => {
         Login & Security
       </h2>
 
-      {/* Email Section */}
       <div className="bg-gray-50 p-6 rounded-lg mb-6">
         <div className="flex items-center justify-between">
           <div>
@@ -50,7 +49,6 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Password Section */}
       <div className="bg-gray-50 p-6 rounded-lg mb-6">
         <div className="flex items-center justify-between mb-4">
           <div>
@@ -131,7 +129,6 @@ const Login = () => {
         )}
       </div>
 
-      {/* Two-Factor Authentication */}
       <div className="bg-gray-50 p-6 rounded-lg mb-6">
         <div className="flex items-center justify-between">
           <div>
@@ -149,7 +146,6 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Login History */}
       <div className="bg-gray-50 p-6 rounded-lg">
         <h3 className="font-semibold text-gray-700 mb-4">Last Login</h3>
         <p className="text-gray-600">{loginData.lastLogin}</p>

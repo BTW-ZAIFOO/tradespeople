@@ -52,8 +52,6 @@ const SignupTradePage = () => {
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  // ✅ Insurance & Verification Fields
   const [insuranceCompany, setInsuranceCompany] = useState("");
   const [coverType, setCoverType] = useState("");
   const [policyNumber, setPolicyNumber] = useState("");
@@ -74,23 +72,17 @@ const SignupTradePage = () => {
   const handleCreateAccount = () => {
     setShowSuccess(true);
     setIsSubmitted(true);
-    // Here you would also send the insurance and verification files to your backend
     setTimeout(() => navigate("/dashboard"), 2000);
   };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center">
-      {/* Header */}
       <header className="w-full py-6 flex justify-center items-center bg-white shadow gap-3">
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="MyTradeLinks Logo" className="h-25" />
-          {/* <h1 className="text-3xl font-bold text-blue-600">
-            my<span className="text-red-500">job</span>quote
-          </h1> */}
         </Link>
       </header>
 
-      {/* Steps Section */}
       <section className="w-full max-w-4xl mt-10 px-1.5 bg-white shadow rounded-lg flex flex-col md:flex-row text-center">
         {[
           "Find Jobs Near You",
@@ -116,7 +108,6 @@ const SignupTradePage = () => {
         ))}
       </section>
 
-      {/* Step 1: Postcode */}
       {step === 1 && (
         <section className="w-full max-w-md mt-8 bg-white shadow rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-2">Looking for more work?</h2>
@@ -148,7 +139,6 @@ const SignupTradePage = () => {
         </section>
       )}
 
-      {/* Step 2: Trades */}
       {step === 2 && (
         <section className="w-full max-w-3xl mt-8 bg-white shadow rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-2">
@@ -192,7 +182,7 @@ const SignupTradePage = () => {
               }`}
               style={{
                 backgroundColor:
-                  selectedTrades.length === 0 ? "#D1D5DB" : "#40D4E8", // gray for disabled, custom blue for active
+                  selectedTrades.length === 0 ? "#D1D5DB" : "#40D4E8",
               }}
             >
               Continue
@@ -201,7 +191,6 @@ const SignupTradePage = () => {
         </section>
       )}
 
-      {/* Step 3: Primary Trade */}
       {step === 3 && (
         <section className="w-full max-w-3xl mt-8 bg-white shadow rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-2">
@@ -244,7 +233,7 @@ const SignupTradePage = () => {
                   : "text-white hover:brightness-90"
               }`}
               style={{
-                backgroundColor: !primaryTrade ? "#D1D5DB" : "#40D4E8", // gray for disabled, custom blue for active
+                backgroundColor: !primaryTrade ? "#D1D5DB" : "#40D4E8",
               }}
             >
               Continue
@@ -253,7 +242,6 @@ const SignupTradePage = () => {
         </section>
       )}
 
-      {/* Step 4: Email */}
       {step === 4 && (
         <section className="w-full max-w-md mt-8 bg-white shadow rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-2">
@@ -282,7 +270,7 @@ const SignupTradePage = () => {
                   : "text-white hover:brightness-90"
               }`}
               style={{
-                backgroundColor: !email ? "#D1D5DB" : "#40D4E8", // gray for disabled, custom blue for active
+                backgroundColor: !email ? "#D1D5DB" : "#40D4E8",
               }}
             >
               Continue
@@ -291,7 +279,6 @@ const SignupTradePage = () => {
         </section>
       )}
 
-      {/* Step 5: Phone */}
       {step === 5 && (
         <section className="w-full max-w-md mt-8 bg-white shadow rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-2">
@@ -320,7 +307,7 @@ const SignupTradePage = () => {
                   : "text-white hover:brightness-90"
               }`}
               style={{
-                backgroundColor: !phone ? "#D1D5DB" : "#40D4E8", // gray for disabled, custom blue for active
+                backgroundColor: !phone ? "#D1D5DB" : "#40D4E8",
               }}
             >
               Continue
@@ -329,7 +316,6 @@ const SignupTradePage = () => {
         </section>
       )}
 
-      {/* Step 6: Create Account with Insurance & Verification */}
       {step === 6 && (
         <section className="w-full max-w-md mt-8 bg-white shadow rounded-lg p-6 relative">
           <h2 className="text-xl font-semibold mb-2">
@@ -340,7 +326,6 @@ const SignupTradePage = () => {
             by email and text message.
           </p>
 
-          {/* Basic Info */}
           <input
             type="text"
             placeholder="First Name"
@@ -356,7 +341,6 @@ const SignupTradePage = () => {
             className="w-full border border-gray-300 rounded-md p-3 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
-          {/* Business Info */}
           <input
             type="text"
             placeholder="Business Name (optional)"
@@ -373,7 +357,6 @@ const SignupTradePage = () => {
             disabled={isSubmitted}
           />
 
-          {/* Insurance Info */}
           <h3 className="font-semibold mb-2 text-gray-700">
             Insurance Details (optional)
           </h3>
@@ -415,7 +398,6 @@ const SignupTradePage = () => {
             onChange={(e) => setPolicyDocument(e.target.files[0])}
             className="w-full mb-4"
           />
-          {/* Tick if insured */}
           {insuranceCompany &&
             coverType &&
             policyNumber &&
@@ -426,7 +408,6 @@ const SignupTradePage = () => {
               </div>
             )}
 
-          {/* Verification Documents */}
           <h3 className="font-semibold mb-2 text-gray-700">
             Verification Documents (optional)
           </h3>
@@ -443,7 +424,6 @@ const SignupTradePage = () => {
             </div>
           )}
 
-          {/* Account Info */}
           <input
             type="password"
             placeholder="Password"
@@ -480,15 +460,14 @@ const SignupTradePage = () => {
               style={{
                 backgroundColor:
                   !firstName || !lastName || !password || !acceptedTerms
-                    ? "#D1D5DB" // disabled gray
-                    : "#40D4E8", // active custom blue
+                    ? "#D1D5DB"
+                    : "#40D4E8",
               }}
             >
               Create Account
             </button>
           </div>
 
-          {/* ✅ Success Modal */}
           {showSuccess && (
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
               <div className="bg-white p-8 rounded-2xl shadow-lg text-center animate-fadeIn">
@@ -507,7 +486,6 @@ const SignupTradePage = () => {
         </section>
       )}
 
-      {/* Footer */}
       <footer className="w-full mt-10 py-6 text-center text-sm text-gray-500">
         © 2025 mytradelinks.co.uk |{" "}
         <span className="underline cursor-pointer">Contact</span> |{" "}

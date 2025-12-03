@@ -69,12 +69,9 @@ const TicketsPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-       {/* Quick Access Cards */}
-        <QuickAccessCards />
-
+      <QuickAccessCards />
       <div className="max-w-7xl mx-auto py-8 px-24">
         <div className="bg-white rounded-lg shadow-sm p-8">
-          {/* Header */}
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
               My Support Tickets
@@ -84,7 +81,6 @@ const TicketsPage = () => {
             </p>
           </div>
 
-          {/* Tickets List */}
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -149,7 +145,6 @@ const TicketsPage = () => {
             </table>
           </div>
 
-          {/* Empty State */}
           {tickets.length === 0 && (
             <div className="text-center py-12">
               <p className="text-gray-500 text-lg">No support tickets found.</p>
@@ -159,7 +154,6 @@ const TicketsPage = () => {
             </div>
           )}
 
-          {/* Ticket Details */}
           {tickets.length > 0 && (
             <div className="mt-12 pt-8 border-t border-gray-200">
               <h2 className="text-xl font-bold text-gray-800 mb-6">

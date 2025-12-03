@@ -24,11 +24,9 @@ const CreditsPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
       <div className="max-w-6xl mx-auto p-9">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left Section - My Credits */}
           <div className="lg:col-span-1">
             <div className="bg-white shadow-sm p-6">
               <h2 className="text-xl font-semibold text-gray-700 mb-6 text-center border-b border-gray-300 pb-2">
@@ -68,9 +66,7 @@ const CreditsPage = () => {
             </div>
           </div>
 
-          {/* Right Section - Tabs and Purchase */}
           <div className="lg:col-span-2">
-            {/* Tabs */}
             <div className="bg-white flex items-center gap-4 mb-3 shadow-sm overflow-x-auto">
               <button
                 onClick={() => setActiveTab("subscriptions")}
@@ -103,7 +99,6 @@ const CreditsPage = () => {
                 Addons
               </button>
 
-              {/* Settings Icon */}
               <div className="flex items-center px-4">
                 <button className="p-2 text-gray-400 hover:text-gray-600 cursor-pointer">
                   <svg
@@ -129,7 +124,6 @@ const CreditsPage = () => {
               </div>
             </div>
 
-            {/* Tab Content */}
             <div className="bg-white shadow-sm">
               <div className="p-8">
                 {activeTab === "credits" && (
@@ -144,16 +138,13 @@ const CreditsPage = () => {
                           key={index}
                           className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 border border-gray-300 rounded-sm hover:border-blue-300 transition"
                         >
-                          {/* Credits */}
                           <div className="flex-1 mb-3 sm:mb-0">
                             <h3 className="text-2xl font-semibold text-orange-500">
                               {pack.credits} credits
                             </h3>
                           </div>
 
-                          {/* Price + Button */}
                           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 w-full sm:w-auto">
-                            {/* Price */}
                             <div className="text-left sm:text-right mb-3 sm:mb-0">
                               <p className="text-2xl font-bold text-gray-800">
                                 £{pack.price}
@@ -167,7 +158,6 @@ const CreditsPage = () => {
                               </p>
                             </div>
 
-                            {/* Button */}
                             <button className="px-5 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition cursor-pointer w-full sm:w-auto">
                               BUY NOW
                             </button>

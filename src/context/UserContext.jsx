@@ -3,18 +3,16 @@ import React, { createContext, useState, useContext } from 'react';
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  // Dummy user data
   const [currentUser, setCurrentUser] = useState({
     id: 1,
     name: 'Usman Muneer',
     email: 'sarah@example.com',
-    userType: 'homeowner', // 'homeowner' or 'trades'
+    userType: 'homeowner', 
     profileImage: null,
     location: 'London, UK',
     joinDate: '2024-01-15'
   });
 
-  // Dummy trades user
   const tradesUser = {
     id: 2,
     name: 'Usman Muneer',
@@ -27,7 +25,6 @@ export const UserProvider = ({ children }) => {
     reviewCount: 45
   };
 
-  // Dummy homeowner user
   const homeownerUser = {
     id: 1,
     name: 'Usman Muneer',

@@ -56,8 +56,6 @@ const CostGuides = () => {
   return (
     <section className="py-24 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Heading + Navigation Buttons Row */}
         <div className="mb-8 text-center relative">
           <h2
             className="text-3xl md:text-4xl font-bold"
@@ -66,7 +64,6 @@ const CostGuides = () => {
             Our cost guides for popular household jobs
           </h2>
 
-          {/* Navigation Buttons */}
           <div className="mt-4 flex justify-center gap-3 lg:absolute lg:top-0 lg:right-0 lg:mt-0">
             <button
               onClick={handlePrev}
@@ -98,7 +95,6 @@ const CostGuides = () => {
           </div>
         </div>
 
-        {/* Carousel Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {visible.map((item, idx) => (
             <div key={idx} className="text-left overflow-hidden rounded-lg">
@@ -117,7 +113,6 @@ const CostGuides = () => {
           ))}
         </div>
 
-        {/* See All Cost Guides Button */}
         <div className="text-center mt-8">
           <button
             className="px-8 py-3 rounded-lg font-semibold text-white transition cursor-pointer"

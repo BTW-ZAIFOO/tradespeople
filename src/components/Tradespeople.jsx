@@ -45,11 +45,8 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
           </h2>
         </div>
 
-        {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left: Tradespeople List */}
           <div className="lg:col-span-2">
-            {/* Filter & Sort Bar */}
             <div className="bg-white rounded-lg p-6 shadow-sm mb-8">
               <div className="space-y-4">
                 <div className="flex flex-wrap items-center gap-4">
@@ -88,7 +85,6 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
                     </select>
                   </div>
 
-                  {/* Results Count */}
                   <div className="text-sm font-semibold text-orange-500">
                     1-20 of {totalTradespeople.toLocaleString()} tradespeople
                   </div>
@@ -96,7 +92,6 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
               </div>
             </div>
 
-            {/* Tradespeople Cards */}
             <div className="space-y-6">
               {tradespeople.slice(0, 20).map((tradesperson) => (
                 <div
@@ -104,7 +99,6 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
                   className="bg-white rounded-lg shadow-md p-6"
                 >
                   <div className="flex flex-col md:flex-row gap-6">
-                    {/* Logo Section */}
                     <div className="md:w-20 shrink-0">
                       <div className="w-20 h-20 rounded-lg overflow-hidden">
                         <img
@@ -115,17 +109,13 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
                       </div>
                     </div>
 
-                    {/* Company Info */}
                     <div className="flex-1 min-w-0">
-                      {/* Top Section: Name + Rating + Button */}
                       <div className="flex items-start justify-between gap-4 mb-2 md:flex-row md:items-start md:justify-between flex-col">
-                        {/* Name + Rating */}
                         <div className="w-full">
                           <h3 className="text-lg font-bold text-gray-800">
                             {tradesperson.name}
                           </h3>
 
-                          {/* Stars & Rating */}
                           <div className="flex items-center gap-2 mt-1">
                             <div className="flex gap-1">
                               {renderStars(tradesperson.rating)}
@@ -137,18 +127,15 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
                           </div>
                         </div>
 
-                        {/* PROFILE Button */}
                         <button className="px-4 py-2 border-2 border-[#40D4E8] bg-[#40D4E8] text-white rounded font-bold text-xs whitespace-nowrap hover:bg-[#00A896] transition cursor-pointer md:self-start w-full mt-2 md:w-auto">
                           PROFILE
                         </button>
                       </div>
 
-                      {/* Description */}
                       <p className="text-sm text-gray-600 line-clamp-3 mb-3">
                         {tradesperson.description}
                       </p>
 
-                      {/* Latest Review */}
                       <div className="bg-gray-50 rounded p-3 mb-3">
                         <p className="font-semibold text-gray-800 text-sm mb-1">
                           {tradesperson.latestReview.title}
@@ -163,7 +150,6 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
                         </p>
                       </div>
 
-                      {/* Location & Coverage Info */}
                       <div className="flex flex-wrap gap-4 text-xs text-gray-600">
                         <div className="flex items-center gap-1">
                           <MapPin className="w-4 h-4 text-red-500" />
@@ -189,9 +175,7 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
             </div>
           </div>
 
-          {/* Right Sidebar */}
           <div className="lg:col-span-1">
-            {/* Reviews Card */}
             <div className="bg-white rounded-lg shadow-md p-6 mb-6 sticky top-4">
               <p className="text-center text-sm text-gray-600 mb-3">
                 Read our{" "}
@@ -208,18 +192,7 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
               <p className="text-center text-3xl font-bold text-gray-800 mb-2">
                 4.68 out of 5
               </p>
-
-              <div className="text-center mb-4">
-                {/* <img
-                  src="https://cdn.worldvectorlogo.com/logos/reviews-io.svg"
-                  alt="Reviews.io"
-                  className="h-6 mx-auto"
-                /> */}
-              </div>
-
               <hr className="my-4" />
-
-              {/* Become a Member */}
               <div className="text-center">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">
                   Become a member
@@ -235,7 +208,6 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
           </div>
         </div>
 
-        {/* Load More */}
         <div className="text-center mt-12">
           <button className="px-8 py-3 bg-[#40D4E8] text-white rounded-lg font-semibold hover:bg-[#00A896] transition cursor-pointer">
             Load More Tradespeople
@@ -243,10 +215,8 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
         </div>
       </div>
 
-      {/* ================= RECENT QUESTIONS SECTION ================= */}
       <div className="bg-[#f4f8ff] py-16 mt-16">
         <div className="max-w-6xl mx-auto px-4">
-          {/* Heading */}
           <div className="flex items-center mb-8">
             <div className="w-1.5 h-6 bg-blue-600 mr-3 rounded-sm"></div>
             <h2 className="text-lg font-bold text-[#1e4db7] tracking-wide uppercase">
@@ -254,7 +224,6 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
             </h2>
           </div>
 
-          {/* Questions Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -333,7 +302,6 @@ const Tradespeople = ({ locationName, tradespeople = [] }) => {
           </div>
         </div>
       </div>
-      {/* === FIND TRADESMAN CTA SECTION === */}
       <FindTradesmanCTA />
     </div>
   );

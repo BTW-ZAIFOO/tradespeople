@@ -5,13 +5,12 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/post-job"); // navigate to PostJobPage
+    navigate("/post-job");
   };
 
   return (
     <section className="relative bg-linear-to-b from-[#EAF4FF] to-[#F9FCFF] py-30">
       <div className="max-w-6xl mx-auto text-center px-4">
-        {/* Heading */}
         <h1
           className="text-4xl md:text-4xl font-extrabold leading-tight tracking-tight mb-3"
           style={{
@@ -35,9 +34,7 @@ const Hero = () => {
           It's FREE and there are no obligations
         </p>
 
-        {/* Search Box */}
         <div className="bg-white shadow-2xl p-2 flex flex-col sm:flex-row gap-2 max-w-2xl mx-auto rounded-lg border-2 border-gray-300">
-          {/* Input Field */}
           <div className="flex-1 flex items-center px-4 py-5 bg-white">
             <svg
               className="w-5 h-5 text-gray-400 mr-2"
@@ -59,7 +56,6 @@ const Hero = () => {
             />
           </div>
 
-          {/* Desktop Button */}
           <button
             onClick={handleGetStarted}
             className="hidden sm:inline-block bg-[#009B7D] hover:bg-[#009B7D] text-white font-semibold px-4 py-0.5 border border-[#009B7D] text-lg whitespace-nowrap transition rounded-md cursor-pointer"
@@ -68,7 +64,6 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Mobile Button */}
         <div className="sm:hidden w-full flex justify-center mt-3">
           <button
             onClick={handleGetStarted}
@@ -78,11 +73,9 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Trustpilot Section */}
         <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
           <span className="font-semibold text-gray-800">Excellent</span>
 
-          {/* Each star in its own green square */}
           <div className="flex items-center gap-1">
             {Array.from({ length: 5 }).map((_, i) => (
               <div
@@ -102,7 +95,6 @@ const Hero = () => {
             34,192 reviews on
           </a>
 
-          {/* Trustpilot text with green star */}
           <span className="font-semibold text-gray-800 flex items-center gap-1">
             <span className="text-base" style={{ color: "#009B7D" }}>
               ★

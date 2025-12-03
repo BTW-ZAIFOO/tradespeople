@@ -31,7 +31,6 @@ const BillingTabs = ({ activeTab: initialTab = 'payment' }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-sm">
-      {/* Tab Navigation */}
       <div className="border-b border-gray-200">
         <div className="flex">
           {tabs.map((tab) => (
@@ -50,7 +49,6 @@ const BillingTabs = ({ activeTab: initialTab = 'payment' }) => {
         </div>
       </div>
 
-      {/* Tab Content */}
       <div className="p-8">
         {renderTabContent()}
       </div>

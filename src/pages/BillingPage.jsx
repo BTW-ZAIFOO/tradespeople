@@ -111,13 +111,9 @@ const BillingPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
-
-      {/* Billing Page Content */}
       <div className="p-8 max-w-6xl mx-auto">
         {selectedTab ? (
-          // Show tabs when a category is selected
           <div className="rounded shadow-sm">
             <div className="p-6 border-b border-gray-200">
               <button
@@ -136,9 +132,7 @@ const BillingPage = () => {
             </div>
           </div>
         ) : (
-          // Show billing categories grid
           <div className="p-8">
-            {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-gray-700 mb-3">
                 My Billing
@@ -149,7 +143,6 @@ const BillingPage = () => {
               </p>
             </div>
 
-            {/* Billing Categories Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 px-4 sm:px-10 md:px-16 lg:px-20 py-5 bg-gray-100 rounded shadow-sm">
               {billingCategories.map((category, index) => (
                 <button

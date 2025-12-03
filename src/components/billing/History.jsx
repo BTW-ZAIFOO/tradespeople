@@ -1,42 +1,42 @@
-import React from 'react';
+import React from "react";
 
 const History = () => {
   const history = [
     {
       id: 1,
-      date: '2025-10-20 10:30 AM',
-      action: 'Card Added',
-      details: 'Visa ending in 4242',
-      status: 'Completed'
+      date: "2025-10-20 10:30 AM",
+      action: "Card Added",
+      details: "Visa ending in 4242",
+      status: "Completed",
     },
     {
       id: 2,
-      date: '2025-10-18 02:15 PM',
-      action: 'Payment Processed',
-      details: 'Invoice INV-001',
-      status: 'Completed'
+      date: "2025-10-18 02:15 PM",
+      action: "Payment Processed",
+      details: "Invoice INV-001",
+      status: "Completed",
     },
     {
       id: 3,
-      date: '2025-10-15 09:45 AM',
-      action: 'Job Posted',
-      details: 'Plumbing Service - $49.99',
-      status: 'Completed'
+      date: "2025-10-15 09:45 AM",
+      action: "Job Posted",
+      details: "Plumbing Service - $49.99",
+      status: "Completed",
     },
     {
       id: 4,
-      date: '2025-10-10 04:20 PM',
-      action: 'Promotional Code Applied',
-      details: 'SAVE10 - $10.00 credit',
-      status: 'Completed'
+      date: "2025-10-10 04:20 PM",
+      action: "Promotional Code Applied",
+      details: "SAVE10 - $10.00 credit",
+      status: "Completed",
     },
     {
       id: 5,
-      date: '2025-10-05 01:00 PM',
-      action: 'Card Verification',
-      details: 'Mastercard ending in 5555',
-      status: 'Completed'
-    }
+      date: "2025-10-05 01:00 PM",
+      action: "Card Verification",
+      details: "Mastercard ending in 5555",
+      status: "Completed",
+    },
   ];
 
   return (

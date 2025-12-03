@@ -33,7 +33,6 @@ const LatestArticles = () => {
           Our latest articles
         </h2>
 
-        {/* Articles grid */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           {articles.map((article, index) => (
             <div
@@ -72,7 +71,6 @@ const LatestArticles = () => {
           ))}
         </div>
 
-        {/* Bottom line */}
         <p className="text-[#505566]">
           See more articles from our{" "}
           <a href="#" className="text-[#009B7D] hover:underline">

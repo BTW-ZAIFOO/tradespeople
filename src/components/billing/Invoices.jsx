@@ -1,28 +1,28 @@
-import React from 'react';
+import React from "react";
 
 const Invoices = () => {
   const invoices = [
     {
-      id: 'INV-001',
-      date: '2025-10-15',
-      amount: '$149.99',
-      status: 'Paid',
-      pdf: '#'
+      id: "INV-001",
+      date: "2025-10-15",
+      amount: "$149.99",
+      status: "Paid",
+      pdf: "#",
     },
     {
-      id: 'INV-002',
-      date: '2025-09-15',
-      amount: '$149.99',
-      status: 'Paid',
-      pdf: '#'
+      id: "INV-002",
+      date: "2025-09-15",
+      amount: "$149.99",
+      status: "Paid",
+      pdf: "#",
     },
     {
-      id: 'INV-003',
-      date: '2025-08-15',
-      amount: '$149.99',
-      status: 'Paid',
-      pdf: '#'
-    }
+      id: "INV-003",
+      date: "2025-08-15",
+      amount: "$149.99",
+      status: "Paid",
+      pdf: "#",
+    },
   ];
 
   return (
@@ -34,19 +34,34 @@ const Invoices = () => {
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">Invoice ID</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">Date</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">Amount</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">Status</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">Action</th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-700">
+                  Invoice ID
+                </th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-700">
+                  Date
+                </th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-700">
+                  Amount
+                </th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-700">
+                  Status
+                </th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-700">
+                  Action
+                </th>
               </tr>
             </thead>
             <tbody>
               {invoices.map((invoice) => (
-                <tr key={invoice.id} className="border-b border-gray-200 hover:bg-gray-50">
+                <tr
+                  key={invoice.id}
+                  className="border-b border-gray-200 hover:bg-gray-50"
+                >
                   <td className="px-4 py-3 text-gray-600">{invoice.id}</td>
                   <td className="px-4 py-3 text-gray-600">{invoice.date}</td>
-                  <td className="px-4 py-3 text-gray-600 font-semibold">{invoice.amount}</td>
+                  <td className="px-4 py-3 text-gray-600 font-semibold">
+                    {invoice.amount}
+                  </td>
                   <td className="px-4 py-3">
                     <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
                       {invoice.status}

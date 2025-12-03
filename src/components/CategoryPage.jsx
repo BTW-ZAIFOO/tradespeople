@@ -41,11 +41,9 @@ const CategoryPage = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
 
-      {/* SECTION 1: Hero with Postcode Search */}
       <section className="bg-gray-50 py-16 max-w-6xl mx-auto">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Text Content */}
             <div>
               <h1
                 className="font-extrabold mb-4 leading-tight"
@@ -62,16 +60,13 @@ const CategoryPage = () => {
                 It's FREE and there are no obligations
               </p>
 
-              {/* Search Box with Button */}
               <div className="mb-8 flex flex-col lg:flex-row justify-between lg:border-2 lg:border-gray-300 lg:rounded-lg lg:p-1">
-                {/* Input */}
                 <input
                   type="text"
                   placeholder="Enter your postcode"
                   className="px-6 py-3 border-2 border-gray-300 lg:border-none rounded-lg lg:rounded-none focus:outline-none focus:border-[#40D4E8]"
                 />
 
-                {/* Button Wrapper */}
                 <div className="mt-3 lg:mt-0 lg:ml-2">
                   <button className="px-8 py-4 bg-[#40D4E8] text-white font-semibold rounded-md hover:bg-[#00A896] transition cursor-pointer">
                     Get Started
@@ -79,9 +74,7 @@ const CategoryPage = () => {
                 </div>
               </div>
 
-              {/* Trust badges */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                {/* Stars in boxes */}
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <div
@@ -93,7 +86,6 @@ const CategoryPage = () => {
                   ))}
                 </div>
 
-                {/* Separate star with Trustpilot */}
                 <div className="sm:ml-2">
                   <p className="font-bold text-gray-900 flex flex-wrap items-center gap-1">
                     34,282 reviews from
@@ -104,7 +96,6 @@ const CategoryPage = () => {
               </div>
             </div>
 
-            {/* Right: Image */}
             <div className="hidden lg:block">
               <img
                 src={category.banner}
@@ -117,7 +108,6 @@ const CategoryPage = () => {
       </section>
       <Featured />
 
-      {/* SECTION 2: Need a Builder? */}
       <section
         className="py-16 border-b-2 border-gray-300"
         style={{ backgroundColor: "#dbe0f1" }}
@@ -158,7 +148,6 @@ const CategoryPage = () => {
         </div>
       </section>
 
-      {/* SECTION 3: How it works (3 steps) */}
       <section
         className="py-16 bg-gray-50"
         style={{ backgroundColor: "#dbe0f1" }}
@@ -215,7 +204,6 @@ const CategoryPage = () => {
         </div>
       </section>
 
-      {/* SECTION 4: [Trade] IN THE UK - Directory */}
       <section
         className="py-12 bg-[#f6faff]"
         style={{ backgroundColor: "#dbe0f1" }}
@@ -250,9 +238,7 @@ const CategoryPage = () => {
             </div>
           </div>
 
-          {/* Tradesperson Cards */}
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Left Side - Tradespeople Section */}
             <div className="flex-1 space-y-8">
               {category.tradespeople &&
                 category.tradespeople.map((person, index) => (
@@ -261,14 +247,12 @@ const CategoryPage = () => {
                     className="bg-white border-2 border-gray-200 rounded-lg p-6 sm:p-8 hover:shadow-lg transition"
                   >
                     <div className="flex flex-col sm:flex-row gap-6">
-                      {/* Avatar */}
                       <div className="shrink-0 flex justify-center sm:block">
                         <div className="w-20 h-20 bg-linear-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                           {person.name.charAt(0)}
                         </div>
                       </div>
 
-                      {/* Content */}
                       <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-2">
                           <div>
@@ -291,7 +275,6 @@ const CategoryPage = () => {
                           {person.description}
                         </p>
 
-                        {/* Latest Review */}
                         <div className="bg-gray-50 p-4 rounded-lg mb-4">
                           <p className="font-bold text-gray-900 mb-2">
                             {person.latestReviewTitle}
@@ -305,7 +288,6 @@ const CategoryPage = () => {
                           </p>
                         </div>
 
-                        {/* Info Footer */}
                         <div className="flex flex-wrap gap-3 text-sm text-gray-600">
                           <span>📍 Based in {person.location}</span>
                           <span>👤 Member since {person.memberSince}</span>
@@ -320,9 +302,7 @@ const CategoryPage = () => {
                 ))}
             </div>
 
-            {/* Right Side - Sidebar Boxes */}
             <div className="w-full lg:w-1/3 flex flex-col gap-6">
-              {/* Box 1 - Reviews */}
               <div className="bg-white border-2 border-gray-200 rounded-lg p-6 text-center">
                 <h3 className="text-lg font-bold text-gray-900">
                   Read our 3652 reviews
@@ -333,7 +313,6 @@ const CategoryPage = () => {
                 </div>
               </div>
 
-              {/* Box 2 - Become a Member */}
               <div className="bg-white border-2 border-gray-200 rounded-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Become a member
@@ -346,7 +325,6 @@ const CategoryPage = () => {
                 </button>
               </div>
 
-              {/* Box 3 - Locations */}
               <div className="bg-white border-2 border-gray-200 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
                   Locations
@@ -364,7 +342,6 @@ const CategoryPage = () => {
                 </div>
               </div>
 
-              {/* Box 4 - Other Trades */}
               <div className="bg-white border-2 border-gray-200 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
                   Other trades
@@ -384,14 +361,12 @@ const CategoryPage = () => {
             </div>
           </div>
 
-          {/* Load More Button */}
           <div className="text-center mt-12">
             <button className="px-6 py-3 bg-gray-200 text-gray-900 font-bold rounded-lg hover:bg-gray-300 transition cursor-pointer">
               LOAD MORE TRADES
             </button>
           </div>
 
-          {/* Reviews Badge */}
           <div className="text-center mt-12 py-8">
             <p className="text-[#505566] mb-4">Read our 3562 reviews</p>
             <p className="text-3xl font-bold text-[#505566]">4.68 out of 5</p>
@@ -400,10 +375,8 @@ const CategoryPage = () => {
         </div>
       </section>
 
-      {/* SECTION 5: Pricing Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left Side: Chart */}
           <div className="flex flex-col items-center">
             <h3 className="text-lg font-semibold text-[#505566] mb-6">
               Average Daily Cost of a {category.name}
@@ -438,7 +411,6 @@ const CategoryPage = () => {
             </div>
           </div>
 
-          {/* Right Side: Text */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#505566] mb-4">
               How Much Do {category.name} Cost?
@@ -464,12 +436,10 @@ const CategoryPage = () => {
             </button>
           </div>
 
-          {/* Featured costs */}
           <h3 className="text-2xl font-bold text-[#505566] mb-6 mt-12">
             Get a Price for your Job
           </h3>
 
-          {/* Mobile: 1 col | Tablet: 2 col | Desktop: 3 col */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.jobCosts &&
               category.jobCosts.map((job, index) => (
@@ -487,7 +457,6 @@ const CategoryPage = () => {
         </div>
       </section>
 
-      {/* SECTION 6: Recommended & Rated */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-[#505566] mb-12">
@@ -521,7 +490,6 @@ const CategoryPage = () => {
         </div>
       </section>
 
-      {/* SECTION 7: Recent Completed Jobs */}
       <section className="py-16 bg-[#f6faff]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-[#505566] mb-4">
@@ -555,7 +523,6 @@ const CategoryPage = () => {
         </div>
       </section>
 
-      {/* SECTION 8: CTA Section */}
       <section className="py-16 bg-[#40D4E8]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-8">
@@ -567,7 +534,6 @@ const CategoryPage = () => {
         </div>
       </section>
 
-      {/* SECTION 9: [Trade] Near You */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-[#505566] mb-4">

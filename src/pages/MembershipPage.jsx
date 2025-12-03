@@ -4,24 +4,20 @@ import QuickAccessCards from "../components/dashboard/QuickAccessCards";
 const MembershipPage = () => {
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
       <div className="p-8 max-w-6xl mx-auto">
-        {/* My Membership Section */}
         <div className="bg-white rounded-lg shadow-sm p-6">
           <h2 className="text-2xl font-semibold text-gray-700 mb-8 border-b border-gray-300 pb-2">
             My Membership
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Subscription Section */}
             <div>
               <h3 className="text-xl font-semibold text-gray-700 mb-6 border border-gray-300 p-2 rounded-md">
                 Subscription
               </h3>
 
               <div className="space-y-6 border border-gray-300 rounded-md p-4">
-                {/* Subscription Package */}
                 <div>
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
                     <span className="text-gray-600 mb-1 sm:mb-0">
@@ -51,7 +47,6 @@ const MembershipPage = () => {
                   </button>
                 </div>
 
-                {/* Credits */}
                 <div className="pt-6 border-t border-gray-300">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
                     <span className="text-gray-600 mb-1 sm:mb-0">Credits:</span>
@@ -68,7 +63,6 @@ const MembershipPage = () => {
                   </button>
                 </div>
 
-                {/* Categories */}
                 <div className="pt-6 border-t border-gray-300">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
                     <span className="text-gray-600 mb-1 sm:mb-0">
@@ -86,14 +80,12 @@ const MembershipPage = () => {
               </div>
             </div>
 
-            {/* Billing Section */}
             <div>
               <h3 className="text-xl font-semibold text-gray-700 mb-6 border border-gray-300 p-2 rounded-md">
                 Billing
               </h3>
 
               <div className="space-y-6 border border-gray-300 rounded-md p-4">
-                {/* Payment Method */}
                 <div>
                   <div className="flex justify-between items-start mb-2">
                     <span className="text-gray-600">Payment Method:</span>
@@ -108,7 +100,6 @@ const MembershipPage = () => {
                   </button>
                 </div>
 
-                {/* Manage Billing Button */}
                 <div className="pt-6">
                   <button className="px-5 py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition cursor-pointer">
                     Manage Billing

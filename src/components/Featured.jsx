@@ -1,6 +1,4 @@
 import React from "react";
-
-// Import your logos
 import guardian from "../assets/theguardian.jpg";
 import cosmopolitan from "../assets/cosmopolitan.jpg";
 import dailyMail from "../assets/dailymail.jpg";
@@ -21,7 +19,6 @@ const Featured = () => {
   return (
     <section className="py-12 bg-white">
       <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6">
-        {/* Heading */}
         <h3
           className="text-center text-2xl font-bold mb-10"
           style={{ color: "rgb(80, 85, 102)" }}
@@ -29,7 +26,6 @@ const Featured = () => {
           Featured in
         </h3>
 
-        {/* Logos */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-center justify-center gap-1">
           {publications.map((pub, index) => (
             <div key={index} className="flex justify-center items-center">
@@ -38,7 +34,7 @@ const Featured = () => {
                 alt={pub.name}
                 className="h-20 object-contain"
                 style={{
-                  maxHeight: "70px", // increases image size slightly
+                  maxHeight: "70px", 
                   objectFit: "contain",
                 }}
               />

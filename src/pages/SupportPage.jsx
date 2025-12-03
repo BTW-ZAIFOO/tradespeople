@@ -80,13 +80,9 @@ const SupportPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-full">
-      {/* Quick Access Cards */}
       <QuickAccessCards />
-
       <div className="max-w-6xl mx-auto p-8">
-        {/* Support Section */}
         <div className="p-8">
-          {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-800 mb-3">Support</h1>
             <p className="text-gray-600 text-lg">
@@ -96,7 +92,6 @@ const SupportPage = () => {
             </p>
           </div>
 
-          {/* Support Options */}
           <div className="mb-12">
             <p className="text-gray-600 text-center mb-8 font-medium">
               Please choose one of the following:

@@ -1,35 +1,35 @@
-import React from 'react';
+import React from "react";
 
 const Charges = () => {
   const charges = [
     {
       id: 1,
-      date: '2025-10-20',
-      description: 'Job Posting Fee - Plumbing',
-      amount: '-$49.99',
-      type: 'charge'
+      date: "2025-10-20",
+      description: "Job Posting Fee - Plumbing",
+      amount: "-$49.99",
+      type: "charge",
     },
     {
       id: 2,
-      date: '2025-10-18',
-      description: 'Featured Job Listing',
-      amount: '-$25.00',
-      type: 'charge'
+      date: "2025-10-18",
+      description: "Featured Job Listing",
+      amount: "-$25.00",
+      type: "charge",
     },
     {
       id: 3,
-      date: '2025-10-15',
-      description: 'Promotional Credit Applied',
-      amount: '+$10.00',
-      type: 'credit'
+      date: "2025-10-15",
+      description: "Promotional Credit Applied",
+      amount: "+$10.00",
+      type: "credit",
     },
     {
       id: 4,
-      date: '2025-10-10',
-      description: 'Job Posting Fee - Electrical',
-      amount: '-$49.99',
-      type: 'charge'
-    }
+      date: "2025-10-10",
+      description: "Job Posting Fee - Electrical",
+      amount: "-$49.99",
+      type: "charge",
+    },
   ];
 
   return (
@@ -41,19 +41,32 @@ const Charges = () => {
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">Date</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">Description</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">Amount</th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-700">
+                  Date
+                </th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-700">
+                  Description
+                </th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-700">
+                  Amount
+                </th>
               </tr>
             </thead>
             <tbody>
               {charges.map((charge) => (
-                <tr key={charge.id} className="border-b border-gray-200 hover:bg-gray-50">
+                <tr
+                  key={charge.id}
+                  className="border-b border-gray-200 hover:bg-gray-50"
+                >
                   <td className="px-4 py-3 text-gray-600">{charge.date}</td>
-                  <td className="px-4 py-3 text-gray-600">{charge.description}</td>
+                  <td className="px-4 py-3 text-gray-600">
+                    {charge.description}
+                  </td>
                   <td
                     className={`px-4 py-3 font-semibold ${
-                      charge.type === 'charge' ? 'text-red-600' : 'text-green-600'
+                      charge.type === "charge"
+                        ? "text-red-600"
+                        : "text-green-600"
                     }`}
                   >
                     {charge.amount}

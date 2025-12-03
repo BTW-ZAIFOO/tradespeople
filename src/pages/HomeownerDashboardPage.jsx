@@ -6,10 +6,8 @@ const HomeownerDashboardPage = () => {
   const navigate = useNavigate();
   const [userName, setUserName] = useState("User");
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
-
   const [showEditModal, setShowEditModal] = useState(false);
 
-  // ✅ Get user name from localStorage
   useEffect(() => {
     const storedName =
       localStorage.getItem("username") ||
@@ -25,7 +23,6 @@ const HomeownerDashboardPage = () => {
 
   return (
     <div className="min-h-[calc(100vh-200px)] bg-[#f7fbff]">
-      {/* Header Section */}
       <div className="text-center pt-12">
         <h1 className="text-4xl font-semibold text-gray-800">
           Welcome {userName} 👋
@@ -33,7 +30,6 @@ const HomeownerDashboardPage = () => {
         <div className="w-16 h-1 bg-[#40D4E8] mx-auto my-3 rounded"></div>
       </div>
 
-      {/* Job Card Section */}
       <div className="flex justify-center mt-10">
         <div className="bg-white border rounded-md shadow-sm w-[60%] flex justify-between items-center p-6">
           <div>
@@ -62,7 +58,6 @@ const HomeownerDashboardPage = () => {
         onClose={() => setShowEditModal(false)}
       />
 
-      {/* Post Another Job */}
       <div className="text-center mt-8">
         <button
           onClick={() => navigate("/post-job")}
@@ -72,7 +67,6 @@ const HomeownerDashboardPage = () => {
         </button>
       </div>
 
-      {/* Upgrade Banner */}
       <div className="text-center mt-12 bg-white py-10 border-t border-gray-200">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
           I’m a trade - upgrade your account to a tradesperson
@@ -85,7 +79,6 @@ const HomeownerDashboardPage = () => {
         </button>
       </div>
 
-      {/* Upgrade Modal */}
       {showUpgradeModal && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-8 w-[90%] sm:w-[500px] relative shadow-lg text-center">
